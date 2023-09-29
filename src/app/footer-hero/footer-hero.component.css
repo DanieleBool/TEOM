@@ -1,0 +1,8 @@
+.hero-footer img {
+    height: 95vh;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 60px;
+    -webkit-clip-path: polygon(27% 0, 100% 7%, 100% 51%, 100% 100%, 50% 100%, 0 100%, 0 7%);
+    clip-path: polygon(27% 0, 100% 7%, 100% 51%, 100% 100%, 50% 100%, 0 100%, 0 7%);
+}
