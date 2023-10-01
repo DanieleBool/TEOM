@@ -1,6 +1,14 @@
 .container{
   background-image: url("src\assets\bg\BG_Blur.png");
-  background-size: contain;
+  background-size: cover;
+  margin-top: -60px;
+  margin-bottom: -75px;
+  padding-bottom: 50px;
+  height: 510px;
+  display: flex;
+  clip-path: polygon(
+    -140% -20%, 83% 12%, 100% 0%, 100% 100%, 15% 88%, 0% 100%, 0 0%, 0 20px
+  );
 }
 
 .contact-card {
@@ -8,7 +16,7 @@
   width: 60%;
   height: 260px;
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto ;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -17,21 +25,24 @@
 
 .form-wrapper {
   position: relative;
-  border: 1px solid #ccc;
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px; 
 }
 
 .header {
   position: absolute;
-  top: -10px;
+  top: -15px;
   left: 20px;
-  z-index: 1;
   text-align: center;
+  background-color: #14283D;
 }
 
-.header span {
-  background: #fff;
+.header h2 {
   padding: 0 10px;
+  background: -webkit-linear-gradient(white 30%, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
 }
 
 .form-wrapper form {
@@ -45,22 +56,26 @@
 }
 
 .input-group {
-  flex: 1;
   margin: 0 10px;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 5px;
+  font-size: 10px;
+  color: #FFBB00;
+  margin-left: 12px;
+  margin-bottom: 2px;
 }
 
 .input-group input {
-  width: 100%;
+  width: 194px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   font-size: 9px;
-  background-color: rgba(20, 40, 61, 0.5);
+  height: 9px;
+  color: #eaeaea;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .form-group {
@@ -71,9 +86,11 @@
   width: 100%;
   height: 90px;
   border-radius: 16px;
-  background-color: rgba(20, 40, 61, 0.5);
+  background-color: rgba(255, 255, 255, 0.04);
   font-size: 9px;
-  border: 1px solid #ccc;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  /* backdrop-filter: brightness(200%); */
+  /* backdrop-filter: grayscale(15%); */
 }
 
 .checkbox {
@@ -108,10 +125,24 @@
 }
 
 .header span {
-  background-color: #14283D;
+  background-color: rgba(20, 40, 61);
 }
-d
+
 .checkbox input[type="checkbox"] {
   background-color: rgba(20, 40, 61, 0.5);
   border-radius: 30px;
+}
+
+.checkbox{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.checkbox label{
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+.checkbox a{
+  color: #FFBB00;
 }
