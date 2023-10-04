@@ -1,3 +1,8 @@
+.hero-footer{
+    height: 60vh;
+    user-select: none;
+}
+
 .hero-footer img {
     height: 60vh;
     width: 100%;

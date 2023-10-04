@@ -4,7 +4,8 @@
   height: 100%;
   padding-bottom: 60px;
   color: white;
-  padding: 80px 0 120px 0;
+  padding: 60px 0 120px 0;
+  user-select: none;
 }
   
 .card-section {
@@ -28,18 +29,19 @@
 .description {
   display: flex;
   flex-direction: column;
-  padding: 20px 50px 20px 0px;
+  padding: 20px 50px 20px 20px;
   width: 230px;
   height: 100%;
   font-size: 10px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .desc2{
   padding: 20px 0px 20px 50px;
 }
 
-/* SPILLO */
+/* SCETTRO */
 
 .scettro {
   position: absolute;
@@ -49,22 +51,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 0 20px 0;
+}
+
+.desc2 .scettro {
+  margin-left: 30px;
 }
 
 .pallino {
-  width: 10px;
-  height: 10px;
-  background-color: #FFBB00; /* puoi scegliere il colore che preferisci */
+  width: 11px;
+  height: 11px;
+  /* background-color: #FFBB00; */
   border-radius: 50%;
-  margin-bottom: 2px;
+  background: linear-gradient(#FFBB00, #f89b00 80%);
 }
 
 .lineetta {
   flex-grow: 1;
   width: 2px;
-  background-color: #FFBB00; /* puoi scegliere il colore che preferisci */
+  background-color: #FFBB00;
+  background: linear-gradient(rgb(255, 187, 0, 0.5), transparent);
 }
 
+/* CARD */
 
 .card {
   display: flex;
@@ -85,14 +94,17 @@ img {
   width: 300px;
 }
 
+/* TESTI */
+
 .description h2{
-  background: -webkit-linear-gradient(white 30%, black);
+  background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(58, 58, 58));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 25px;
+  margin-bottom: -2px;
 }
 
 .description h4{
   color: #FFBB00;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }

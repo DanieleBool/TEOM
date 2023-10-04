@@ -30,16 +30,17 @@
   border: 3px solid rgba(255, 255, 255, 0.15);
   border-radius: 25px;
   height: -webkit-fill-available;
+  user-select: none;
 }
 
 /*__TITLE____________________________________________________________________________*/
-
 
 .header {
   position: absolute;
   top: -15px;
   left: 20px;
   text-align: center;
+  user-select: none;
   /* background-color: #14283D; */
 }
 
@@ -115,7 +116,7 @@
   color: #fff;
   margin: 15px 0 0px 0;
   margin-top: 48px;
-
+  user-select: none;
 }
 
 .checkbox input[type="checkbox"] {
@@ -126,6 +127,7 @@
 .checkbox label{
   font-size: 10px;
   margin-left: 3px;
+  user-select: none;
 }
 
 .checkbox a{
@@ -147,7 +149,6 @@
 .checkbox input[type="checkbox"]:checked {
   background-color: #FFBB00;
 }
-
 
 /* __SUBMIT____________________________________________________________________________ */
 
