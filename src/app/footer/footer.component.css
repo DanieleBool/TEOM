@@ -1,6 +1,6 @@
 .container{
     background-color: #112130;
-    padding: 40px 0 24px 0;
+    padding: 35px 0 35px 0;
 }
 
 .footer1{
@@ -11,7 +11,8 @@
 .col {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
+    line-height: 36px;
 }
 
 .title
@@ -33,8 +34,9 @@
     display: flex;
     width: 14px;
     height: 14px;
-    background-color: #184755;
+    background-color: #2d4147;
     border-radius: 6px;
+    border: 3px solid #2d4147;
     text-decoration: none;
     align-items: center;
     justify-content: center;
@@ -43,6 +45,10 @@
     color: #FFBB00;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
+
+/* .fa-instagram{
+    background-color: #FFBB00;
+} */
 
 .socials a:hover
 {
@@ -74,7 +80,7 @@
     content: ' ';
     /* display: inline-block; */
     position: relative;
-    top: 6px;
+    top: 12px;
     left: -6px;
     background: #FFBB00;
     width: 6px;
