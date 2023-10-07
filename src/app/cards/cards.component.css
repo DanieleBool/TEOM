@@ -20,6 +20,7 @@
   align-items: center;
   margin-bottom: 20px;
   margin: 20px 0 20px 0;
+  perspective: 1000px;
 }
 
 .col {
@@ -82,8 +83,8 @@
   background: linear-gradient(to top, #2D5CA6, #14283D);
   border-radius: 19px;
   padding: 9px;
-  transition: transform 0.1s ease-out;
-  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  /* transform-style: preserve-3d; */
 }
 
 img {

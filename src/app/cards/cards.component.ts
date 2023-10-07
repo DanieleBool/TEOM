@@ -1,33 +1,89 @@
-import { Component, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
-export class CardsComponent  implements AfterViewInit {
+export class CardsComponent implements OnInit {
+  public currentPerspItem: any;
+  public canUpdatePersp = true;
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor() { }
 
-  ngAfterViewInit() {
-    const cards: NodeListOf<Element> = this.el.nativeElement.querySelectorAll('.card');
-    cards.forEach((card: Element) => {
-      this.renderer.listen(card, 'mousemove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const xAxis = ((rect.width / 2) - (event.clientX - rect.left)) / 10;
-        const yAxis = ((rect.height / 2) - (event.clientY - rect.top)) / 10;
-  
-        // Calcola la profondità in base alla posizione verticale del mouse
-        const verticalPosition = (event.clientY - rect.top) / rect.height;
-        const zDepth = (verticalPosition < 0.5) ? 30 : -30;
-  
-        this.renderer.setStyle(card, 'transform', `translateZ(${zDepth}px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`);
-      });
-  
-      this.renderer.listen(card, 'mouseleave', () => {
-        this.renderer.setStyle(card, 'transform', 'none');
-      });
-    });
+  ngOnInit(): void {
   }
-  
+
+  public onItemMouseEnter(event: MouseEvent) {
+    const item = event.target as HTMLElement;  // Aggiungi la conversione di tipo qui
+    if (item) {
+      this.currentPerspItem = item;
+      this.updatePersp(event);
+    }
+  }
+
+  public onItemMouseLeave(event: MouseEvent) {
+    this.currentPerspItem.style = '';
+    this.currentPerspItem = null;
+  }
+
+  public onItemMouseMove(event: MouseEvent) {
+    if (this.isTimeToUpdatePersp()) {
+      this.updatePersp(event);
+    }
+  }
+
+  private updatePersp(event: MouseEvent) {
+    const target = event.target as HTMLElement;  // Aggiungi la conversione di tipo qui
+
+    if (target) {
+        const rect = target.getBoundingClientRect();
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
+        let minX = 0;
+        let minY = 0;
+        let maxX = target.offsetWidth;
+        let maxY = target.offsetHeight;
+
+        x = this.normalize(x, minX, maxY) * maxX / 2;
+        y = this.normalize(y, minY, maxY) * maxY / 2;
+
+        this.updateTransformStyle(
+            (-y / target.offsetHeight / 2 * 3).toFixed(2),
+            (x / target.offsetWidth / 2 * 3).toFixed(2)
+        );
+    }
+}
+
+  private normalize(x: number, min: number, max: number) {
+    return 2 * (x - min) / (max - min) - 1;
+  }
+
+  private updateTransformStyle(x: string, y: string) {
+    const inner = this.currentPerspItem;
+
+    // Moltiplica i valori x e y per un fattore per intensificare l'effetto
+    let intensifiedX = (parseFloat(x) * 5).toFixed(5);
+    let intensifiedY = (parseFloat(y) * 5).toFixed(5);
+
+    let style = `rotateX(${intensifiedX}deg) rotateY(${intensifiedY}deg) translateZ(-10px)`;
+
+    inner.style.transform = style;
+    inner.style.webkitTransform = style;
+    inner.style.mozTransform = style;
+    inner.style.msTransform = style;
+    inner.style.oTransform = style;
+}
+
+
+  private isTimeToUpdatePersp() {
+    if (this.canUpdatePersp) {
+      this.canUpdatePersp = false;
+      setTimeout(() => {
+        this.canUpdatePersp = true;
+      }, 45);
+      return true;
+    }
+    return false;
+  }
 }
