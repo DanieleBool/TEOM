@@ -8,14 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class CardsComponent implements OnInit {
   public currentPerspItem: any;
   public canUpdatePersp = true;
+  public currentContainerBackground = 'default-background';
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  // Nuove funzioni per gestire il cambio dello sfondo
+  public changeBackground(backgroundClass: string) {
+    this.currentContainerBackground = backgroundClass;
+  }
+
+  public resetBackground() {
+    this.currentContainerBackground = 'default-background';
+  }
 
   public onItemMouseEnter(event: MouseEvent) {
-    const item = event.target as HTMLElement;  // Aggiungi la conversione di tipo qui
+    const item = event.target as HTMLElement;
     if (item) {
       this.currentPerspItem = item;
       this.updatePersp(event);
@@ -32,6 +42,11 @@ export class CardsComponent implements OnInit {
       this.updatePersp(event);
     }
   }
+
+
+
+
+
 
   private updatePersp(event: MouseEvent) {
     const target = event.target as HTMLElement;  // Aggiungi la conversione di tipo qui

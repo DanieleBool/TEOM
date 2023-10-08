@@ -6,6 +6,7 @@
   color: white;
   padding: 60px 0 120px 0;
   /* user-select: none; */
+  transition: background-color 0.5s ease;
 }
   
 .card-section {
@@ -110,4 +111,28 @@ img {
 .description h4{
   color: #FFBB00;
   margin-bottom: 8px;
+}
+
+
+
+.default-background {
+  background-color: #112130;
+}
+
+.background1 {
+  background-image: url('../../assets/cards_img/Article1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.background2 {
+  background-image: url('../../assets/cards_img/Article2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.background3 {
+  background-image: url('../../assets/cards_img/Article3.png');
+  background-size: cover;
+  background-position: center;
 }
