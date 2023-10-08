@@ -63,10 +63,10 @@ export class CardsComponent implements OnInit {
     const inner = this.currentPerspItem;
 
     // Moltiplica i valori x e y per un fattore per intensificare l'effetto
-    let intensifiedX = (parseFloat(x) * 5).toFixed(5);
-    let intensifiedY = (parseFloat(y) * 5).toFixed(5);
+    let intensifiedX = (parseFloat(x) * 10).toFixed(10);
+    let intensifiedY = (parseFloat(y) * 10).toFixed(10);
 
-    let style = `rotateX(${intensifiedX}deg) rotateY(${intensifiedY}deg) translateZ(-10px)`;
+    let style = `rotateX(${intensifiedX}deg) rotateY(${intensifiedY}deg) translateZ(-10px)  scale(1.05)`;
 
     inner.style.transform = style;
     inner.style.webkitTransform = style;
