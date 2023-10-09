@@ -51,6 +51,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 28px;
+  transform: skewX(-9deg);
 }
 
 /*__INPUT____________________________________________________________________________*/
