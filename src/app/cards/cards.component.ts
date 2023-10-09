@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-cards',
@@ -9,21 +9,13 @@ export class CardsComponent implements OnInit {
   public currentPerspItem: any;
   public canUpdatePersp = true;
   public currentContainerBackground = 'default-background';
+  public currentBackgroundImage = 'none';
+  public showOverlay = false;
 
-
-  constructor() { }
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
   }
-  // Nuove funzioni per gestire il cambio dello sfondo
-  public changeBackground(backgroundClass: string) {
-    this.currentContainerBackground = backgroundClass;
-  }
-
-  public resetBackground() {
-    this.currentContainerBackground = 'default-background';
-  }
-
   public onItemMouseEnter(event: MouseEvent) {
     const item = event.target as HTMLElement;
     if (item) {
@@ -43,7 +35,21 @@ export class CardsComponent implements OnInit {
     }
   }
 
-
+  public changeBackgroundForRow(event: MouseEvent, image: string, bgClass: string) {
+    const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
+    backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
+    backgroundContainer.classList.add('show-background', bgClass);
+    backgroundContainer.classList.add('animate');  // Aggiunge la classe per l'animazione
+  }
+  
+  public resetBackground(event: MouseEvent) {
+    const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
+    backgroundContainer.classList.remove('show-background', 'bg1', 'bg2', 'bg3');
+    backgroundContainer.classList.remove('animate');  // Rimuove la classe per l'animazione
+  }
+  
+  
+  
 
 
 

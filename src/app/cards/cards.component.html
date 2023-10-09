@@ -1,8 +1,10 @@
-<div class="container" [ngClass]="currentContainerBackground">
+<div class="container-wrapper">
+  <div class="background-container" [ngClass]="currentContainerBackground"></div>
+  <div class="container">
   <div class="card-section">
-    <div class="row bg1"
-    (mouseenter)="changeBackground('background1')"
-    (mouseleave)="resetBackground()">
+    <div class="row bg1" 
+    (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article1.png', 'bg1')" 
+    (mouseleave)="resetBackground($event)">
       <div class="col description">
         <div class="scettro">
           <div class="pallino"></div>
@@ -21,8 +23,8 @@
     </div>
 
     <div class="row bg2"
-    (mouseenter)="changeBackground('background2')"
-    (mouseleave)="resetBackground()">
+    (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article2.png', 'bg2')" 
+    (mouseleave)="resetBackground($event)">
       <div class="col card"
       (mouseenter)="onItemMouseEnter($event)"
       (mouseleave)="onItemMouseLeave($event)"
@@ -41,8 +43,8 @@
     </div>
     
     <div class="row bg3"
-    (mouseenter)="changeBackground('background3')"
-    (mouseleave)="resetBackground()">
+    (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article3.png', 'bg3')" 
+    (mouseleave)="resetBackground($event)">
       <div class="col description">
         <div class="scettro">
           <div class="pallino"></div>
@@ -59,5 +61,5 @@
         <img src="assets/cards_img/Article3.png" alt="Card 3">
       </div>
     </div>
-  </div>
+  </div></div>
 </div>
