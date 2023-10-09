@@ -36,12 +36,13 @@
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 9;
   }
 }
 
+/* QUI SI DECIDE LA TRASPARENZA */
 .background-container.show-background::before {
-  opacity: 0.1;
+  opacity: 0.06;
 }
 
 .card-section {
@@ -76,6 +77,13 @@
   position: relative;
   box-sizing: border-box;
 }
+
+.background-container.bg1::before,
+.background-container.bg2::before,
+.background-container.bg3::before {
+  background-attachment: fixed;
+}
+
 
 .desc2{
   padding: 20px 0px 20px 60px;
