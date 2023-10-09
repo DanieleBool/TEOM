@@ -49,13 +49,9 @@ export class CardsComponent implements OnInit {
   }
   
   
-  
-
-
-
-
+  // MOVIMENTO CARD
   private updatePersp(event: MouseEvent) {
-    const target = event.target as HTMLElement;  // Aggiungi la conversione di tipo qui
+    const target = event.target as HTMLElement;
 
     if (target) {
         const rect = target.getBoundingClientRect();
@@ -83,7 +79,6 @@ export class CardsComponent implements OnInit {
   private updateTransformStyle(x: string, y: string) {
     const inner = this.currentPerspItem;
 
-    // Moltiplica i valori x e y per un fattore per intensificare l'effetto
     let intensifiedX = (parseFloat(x) * 10).toFixed(10);
     let intensifiedY = (parseFloat(y) * 10).toFixed(10);
 

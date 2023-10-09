@@ -46,8 +46,6 @@
 }
 
 
-
-
 .card-section {
   /* width: 75%; */
   display: flex;
@@ -115,7 +113,6 @@
   transform: scale(1.5);
 }
 
-
 .lineetta {
   flex-grow: 1;
   width: 2px;
@@ -160,92 +157,3 @@ img {
   color: #FFBB00;
   margin-bottom: 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .bg1 {
-  background-image: url('../../assets/cards_img/Article1.png');
-  filter: blur(5px);
-}
-
-.bg2 {
-  background-image: url('../../assets/cards_img/Article2.png');
-  filter: blur(5px);
-}
-
-.bg3 {
-  background-image: url('../../assets/cards_img/Article3.png');
-  filter: blur(5px);
-} */
-
-
-
-/* .default-background {
-  background-color: #112130;
-}
-
-.background1 {
-  background-image: url('../../assets/cards_img/Article1.png');
-  background-size: cover;
-  background-position: center;
-  backdrop-filter: blur(10px);
-}
-
-.background2 {
-  background-image: url('../../assets/cards_img/Article2.png');
-  background-size: cover;
-  background-position: center;
-  backdrop-filter: blur(10px);
-}
-
-.background3 {
-  background-image: url('../../assets/cards_img/Article3.png');
-  background-size: cover;
-  background-position: center;
-  backdrop-filter: blur(10px);
-}
-
-.background1::before,
-.background2::before,
-.background3::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(10px);
-  z-index: -1;
-} */
