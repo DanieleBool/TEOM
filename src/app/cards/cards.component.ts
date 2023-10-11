@@ -39,13 +39,13 @@ export class CardsComponent implements OnInit {
     const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
     backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
     backgroundContainer.classList.add('show-background', bgClass);
-    backgroundContainer.classList.add('animate');  // Aggiunge la classe per l'animazione
+    backgroundContainer.classList.add('animate');
   }
   
   public resetBackground(event: MouseEvent) {
     const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
     backgroundContainer.classList.remove('show-background', 'bg1', 'bg2', 'bg3');
-    backgroundContainer.classList.remove('animate');  // Rimuove la classe per l'animazione
+    backgroundContainer.classList.add('animate');
   }
   
   
