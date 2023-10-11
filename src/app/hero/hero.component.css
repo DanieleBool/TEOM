@@ -2,7 +2,7 @@
     height: 100vh;
     user-select: none;
     background-image: 
-        linear-gradient(to bottom, transparent, #14283D),
+        linear-gradient(to bottom, transparent, rgb(17, 33, 48)),
         url('../../assets/img/Header.png');
     background-size: cover;
     background-position: center;
@@ -16,6 +16,6 @@
 }
 
 .center-logo img {
-    height: 250px;
+    height: 350px;
     padding-top: 50px;
 }
