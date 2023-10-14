@@ -40,15 +40,15 @@ export class CardsComponent implements OnInit {
       const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
       backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
       backgroundContainer.classList.add('show-background', bgClass);
-    }, 180);  // 150ms di attesa
+    }, 160);
     debouncedChange();
   }
   
   public resetBackground(event: MouseEvent) {
     const debouncedReset = this.debounce(() => {
       const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
-      backgroundContainer.classList.remove('show-background', 'bg1', 'bg2', 'bg3');
-    }, 180);  // 250ms di attesa
+      backgroundContainer.classList.remove('show-background', 'bg2', 'bg3');
+    }, 160);
     debouncedReset();
   }
   

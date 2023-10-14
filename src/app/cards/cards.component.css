@@ -1,8 +1,8 @@
-.space {
+/* .space {
   width: 100%;
   height: 150px;
   background-color: #112130;
-}
+} */
 
 .container-wrapper {
   position: relative;
@@ -36,13 +36,13 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
   background-attachment: fixed;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 /* QUI SI DECIDE LA TRASPARENZA */
 .background-container.show-background::before {
   opacity: 0.06;
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
-
 }
 
 .card-section {
