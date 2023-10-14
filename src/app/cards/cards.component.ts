@@ -36,19 +36,23 @@ export class CardsComponent implements OnInit {
   }
 
   public changeBackgroundForRow(event: MouseEvent, image: string, bgClass: string) {
-    const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
-    backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
-    backgroundContainer.classList.add('show-background', bgClass);
-    backgroundContainer.classList.add('animate');
+    const debouncedChange = this.debounce(() => {
+      const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
+      backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
+      backgroundContainer.classList.add('show-background', bgClass);
+    }, 180);  // 150ms di attesa
+    debouncedChange();
   }
   
   public resetBackground(event: MouseEvent) {
-    const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
-    backgroundContainer.classList.remove('show-background', 'bg1', 'bg2', 'bg3');
-    backgroundContainer.classList.add('animate');
+    const debouncedReset = this.debounce(() => {
+      const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
+      backgroundContainer.classList.remove('show-background', 'bg1', 'bg2', 'bg3');
+    }, 180);  // 250ms di attesa
+    debouncedReset();
   }
   
-  
+
   // MOVIMENTO CARD
   private updatePersp(event: MouseEvent) {
     const target = event.target as HTMLElement;
@@ -89,7 +93,7 @@ export class CardsComponent implements OnInit {
     inner.style.mozTransform = style;
     inner.style.msTransform = style;
     inner.style.oTransform = style;
-}
+  }
 
 
   private isTimeToUpdatePersp() {
@@ -102,4 +106,20 @@ export class CardsComponent implements OnInit {
     }
     return false;
   }
+
+  debounce(func: (...args: any[]) => void, wait: number): (...args: any[]) => void {
+    let timeout: ReturnType<typeof setTimeout> | null = null;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        if (timeout !== null) {
+          clearTimeout(timeout);
+        }
+        func(...args);
+      };
+      if (timeout !== null) {
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(later, wait);
+    };
+  }  
 }
