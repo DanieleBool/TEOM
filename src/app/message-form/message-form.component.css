@@ -119,8 +119,8 @@ input::placeholder, textarea::placeholder {
   display: flex;
   justify-content: center;
   color: #fff;
-  margin: 15px 0 0px 0;
-  /* margin-top: 48px; */
+  margin: 0px auto 0px auto;
+  margin-bottom: 20px;
   user-select: none;
 }
 
@@ -156,6 +156,17 @@ input::placeholder, textarea::placeholder {
   background-color: #FFBB00;
 }
 
+.checkEndButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%) skewX(-9deg);
+}
+
 /* __SUBMIT____________________________________________________________________________ */
 
 .submit-button {
@@ -180,10 +191,9 @@ input::placeholder, textarea::placeholder {
 
 
 .button-wrapper {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%) skewX(-9deg);
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .submit-button:active {
