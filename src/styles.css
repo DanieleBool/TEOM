@@ -4,4 +4,30 @@
     padding: 0px;
     scroll-behavior: smooth;
     font-family: 'Bebas Neue', sans-serif;
+    cursor: url('../src/assets/Cursor/Normal2.png'), auto !important;
+    /* cursor: none; */
 }
+
+/* Barra di scorrimento principale */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Traccia della barra di scorrimento */
+::-webkit-scrollbar-track {
+    background: #112130;
+    opacity: 90%;
+}
+
+/* Maniglia della barra di scorrimento */
+::-webkit-scrollbar-thumb {
+    background:  linear-gradient(#FFBB00 60%, #f89b00);
+    border-radius: 5px;
+}
+
+/* Maniglia della barra di scorrimento al passaggio del mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd000;
+}
+
+/* background: linear-gradient(rgb(255, 187, 0, 0.5), transparent); */

@@ -16,7 +16,7 @@ import { FooterHeroComponent } from './footer-hero/footer-hero.component';
     CardsComponent,
     MessageFormComponent,
     FooterComponent,
-    FooterHeroComponent
+    FooterHeroComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,3 @@
-/* .space {
-  width: 100%;
-  height: 150px;
-  background-color: #112130;
-} */
-
 .container-wrapper {
   position: relative;
   padding: 200px 0 120px 0;
@@ -79,9 +73,6 @@
 
 .background-container.bg1::before {
   mask-image: linear-gradient(to bottom, transparent, #112130 12%); 
-}
-.background-container.bg2::before,
-.background-container.bg3::before {
 }
 
 .desc2 {
