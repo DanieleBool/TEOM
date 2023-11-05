@@ -4,7 +4,7 @@
             <div class="header">
                 <h2>Contattaci</h2>
             </div>
-            <form>
+            <form (submit)="onSubmit()">
                 <div class="input-row">
                     <div class="input-group">
                         <label for="name">Come ti chiami?</label>
@@ -21,12 +21,15 @@
                 </div>
                 <div class="checkEndButtonContainer">
                     <div class="checkbox">
-                        <input type="checkbox" id="privacy" name="privacy">
+                        <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="isCheckboxChecked">
                         <label for="privacy">Ho letto e accetto la <a href="#privacy-policy">Privacy Policy.</a></label>
                     </div>
-                
-                    <div class="button-wrapper">
-                        <button class="submit-button" type="submit"><span>INVIA</span></button>
+                    <div *ngIf="showError" class="error-message">
+                        Per inviare il messaggio devi accettare le regole della Privacy Policy.
+                    </div>
+                    <div class="button-wrapper" (click)="onSubmit()">
+                        <label for="submit-form" class="submit-text">{{ isSubmitted ? 'INVIATO' : 'INVIA' }}</label>
+                        <button id="submit-form" class="submit-button" type="button" [disabled]="!isCheckboxChecked"></button>
                     </div>
                 </div>
             </form>

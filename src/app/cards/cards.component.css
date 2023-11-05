@@ -40,16 +40,16 @@
 }
 
 .card-section {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   color: white;
 }
 
 .row {
   display: flex;
   align-items: center;
-  PADDING: 70px 0 70px 0;
+  padding: 70px 0 70px 0;
   perspective: 1000px;
   position: relative;
   width: auto;
@@ -64,20 +64,21 @@
 .description {
   display: flex;
   flex-direction: column;
-  padding: 20px 50px 20px 32px;
-  width: 23%;
+  padding: 19px 45px 20px 43px;  /* da questo dipende l'altezza dello scettro */
+  width: 370px;
   font-size: 18px;
   position: relative;
   box-sizing: border-box;
+  margin-right: 40px;
+}
+
+.desc2 {
+  padding: 19px 45px 20px 43px;
+  margin-left: 90px; /* sommo il margin right di description */
 }
 
 .background-container.bg1::before {
   mask-image: linear-gradient(to bottom, transparent, #112130 12%); 
-}
-
-.desc2 {
-  padding: 20px 0px 20px 30px;
-  margin-left: 50px;
 }
 
 .scettro {
@@ -88,7 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 34px 0 20px 0;
+  padding: 34px 10px 20px 10px;
 }
 
 .pallino {
@@ -115,9 +116,10 @@
   background: linear-gradient(to top, #2D5CA6, #112130);
   border-radius: 38px;
   padding: 10px;
-  width: 30%;
+  width: 520px;
   justify-content: center;
   transition: transform 0.2s ease-in-out;
+  user-select: none;
 }
 
 img {
@@ -135,6 +137,7 @@ img {
   margin-bottom: -2px;
   transform: skewX(-9deg);
   transition: padding-left 0.3s ease-in-out;
+  user-select: none;
 }
 
 .row:hover h2 {

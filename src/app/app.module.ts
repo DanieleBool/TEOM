@@ -8,6 +8,7 @@ import { CardsComponent } from './cards/cards.component';
 import { MessageFormComponent } from './message-form/message-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterHeroComponent } from './footer-hero/footer-hero.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterHeroComponent } from './footer-hero/footer-hero.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
