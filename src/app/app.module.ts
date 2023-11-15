@@ -9,6 +9,8 @@ import { MessageFormComponent } from './message-form/message-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterHeroComponent } from './footer-hero/footer-hero.component';
 import { FormsModule } from '@angular/forms';
+import { TrailerComponent } from './trailer/trailer.component';
+import { CaroselloComponent } from './carosello/carosello.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FormsModule } from '@angular/forms';
     MessageFormComponent,
     FooterComponent,
     FooterHeroComponent,
+    TrailerComponent,
+    CaroselloComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,200 @@
+.container-wrapper {
+    position: relative;
+    padding: 200px 0 120px 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #112130;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image-url, none) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-attachment: fixed;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .background-container.show-background::before {
+    opacity: 0.06;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .card-section {
+    color: white;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    padding: 70px 0 70px 0;
+    perspective: 1000px;
+    position: relative;
+    width: auto;
+    justify-content: center;
+  }
+  
+  .col {
+    display: flex;
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    padding: 19px 45px 20px 43px;
+    width: 370px;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 40px;
+  }
+  
+  .desc2 {
+    padding: 19px 45px 20px 43px;
+    margin-left: 90px;
+  }
+  
+  .background-container.bg1::before {
+    mask-image: linear-gradient(to bottom, transparent, #112130 12%); 
+  }
+  
+  .scettro {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 10px 20px 10px;
+  }
+  
+  .pallino {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(#FFBB00 60%, #f89b00);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .row:hover .pallino {
+    transform: scale(1.3);
+  }
+  
+  .lineetta {
+    flex-grow: 1;
+    width: 2.7px;
+    background-color: #FFBB00;
+    background: linear-gradient(rgb(255, 187, 0, 0.5), transparent);
+  }
+  
+  .card {
+    display: flex;
+    background: linear-gradient(to top, #2D5CA6, #112130);
+    border-radius: 38px;
+    padding: 10px;
+    width: 520px;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+    user-select: none;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 38px;
+    border: 2px solid white;
+  }
+  
+  .description h2 {
+    background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(17, 33, 48));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: -2px;
+    transform: skewX(-9deg);
+    transition: padding-left 0.3s ease-in-out;
+    user-select: none;
+  }
+  
+  .row:hover h2 {
+    padding-left: 8px;
+  }
+  
+  .description h4 {
+    color: #FFBB00;
+    margin-bottom: 8px;
+  }
+  
+  /* Stili aggiuntivi per il carosello */
+  .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Nasconde la scrollbar in Firefox */
+  }
+  
+  .carousel-container::-webkit-scrollbar {
+    display: none; /* Nasconde la scrollbar in Chrome, Safari e Opera */
+  }
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Aggiungi un po' di contrasto per visibilità */
+    padding: 10px;
+}
+
+  
+  .left-arrow {
+    left: 0px;
+  }
+  
+  .right-arrow {
+    right: 0px;
+  }
+  
+  .carouselContainer:hover .arrow {
+    display: block;
+  }
+
+  .carouselContainer {
+  /*   overflow-x: auto;
+    white-space: nowrap; 
+    scroll-behavior: smooth; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  
+  .cardsWrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}

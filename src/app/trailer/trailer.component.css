@@ -1,0 +1,12 @@
+iframe {
+    border-radius: 25px; /* Arrotonda i bordi dell'iframe */
+    overflow: hidden; /* Assicurati che il contenuto all'interno dell'iframe rispetti i bordi arrotondati */
+}
+  
+.container {
+    background-color: #112130;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}

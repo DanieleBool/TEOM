@@ -4,7 +4,7 @@
             <div class="header">
                 <h2>Contattaci</h2>
             </div>
-            <form (submit)="onSubmit()">
+            <form >
                 <div class="input-row">
                     <div class="input-group">
                         <label for="name">Come ti chiami?</label>
@@ -27,9 +27,9 @@
                     <div *ngIf="showError" class="error-message">
                         Per inviare il messaggio devi accettare le regole della Privacy Policy.
                     </div>
-                    <div class="button-wrapper" (click)="onSubmit()">
+                    <div class="button-wrapper" (click)="onSubmit(submitBtn)">
                         <label for="submit-form" class="submit-text">{{ isSubmitted ? 'INVIATO' : 'INVIA' }}</label>
-                        <button id="submit-form" class="submit-button" type="button" [disabled]="!isCheckboxChecked"></button>
+                        <button #submitBtn id="submit-form" class="submit-button" type="submit" [disabled]="!isCheckboxChecked"></button>
                     </div>
                 </div>
             </form>

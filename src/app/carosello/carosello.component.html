@@ -1,0 +1,38 @@
+<div class="container-wrapper">
+    <div class="background-container" [ngClass]="currentContainerBackground"></div>
+    <div class="container">
+        <div class="card-section">
+                            <!-- Freccia Sinistra per lo Scroll -->
+                            <div class="arrow left-arrow" (click)="scrollLeft()">&#10094;</div>
+
+            <!-- Container del Carosello -->
+            <div class="carouselContainer" #carouselContainer>
+
+                <!-- Prima Card -->
+                <div class="row bg1" (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article1.png', 'bg1')" (mouseleave)="resetBackground($event)">
+                    <div class="col card" (mouseenter)="onItemMouseEnter($event)" (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
+                        <img src="assets/cards_img/Article1.png" alt="Card 1">
+                    </div>
+                </div>
+
+                <!-- Seconda Card -->
+                <div class="row bg2" (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article2.png', 'bg2')" (mouseleave)="resetBackground($event)">
+                    <div class="col card" (mouseenter)="onItemMouseEnter($event)" (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
+                        <img src="assets/cards_img/Article2.png" alt="Card 2">
+                    </div>
+                </div>
+                
+                <!-- Terza Card -->
+                <div class="row bg3" (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article3.png', 'bg3')" (mouseleave)="resetBackground($event)">
+                    <div class="col card" (mouseenter)="onItemMouseEnter($event)" (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
+                        <img src="assets/cards_img/Article3.png" alt="Card 3">
+                    </div>
+                </div>
+
+ 
+            </div>
+                           <!-- Freccia Destra per lo Scroll -->
+                           <div class="arrow right-arrow" (click)="scrollRight()">&#10095;</div>
+        </div>
+    </div>
+</div>

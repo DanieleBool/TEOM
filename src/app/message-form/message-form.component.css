@@ -229,3 +229,20 @@ input::placeholder, textarea::placeholder {
   margin-top: -20px;
   margin-bottom: 3px;
 }
+
+/* Stile per creare l'animazione del bordo */
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 206, 72, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 206, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 206, 72, 0);
+  }
+}
+
+.submit-button-animate {
+  animation: pulse-border 0.6s ease-out;
+}
