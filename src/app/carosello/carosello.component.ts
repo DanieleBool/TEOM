@@ -6,7 +6,6 @@ import { Component, OnInit, Renderer2, ElementRef, ViewChild } from '@angular/co
   styleUrls: ['./carosello.component.css']
 })
 export class CaroselloComponent implements OnInit {
-
   public currentPerspItem: any;
   public canUpdatePersp = true;
   public currentContainerBackground = 'default-background';
@@ -18,14 +17,69 @@ export class CaroselloComponent implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    // Ascoltatore di eventi per lo scroll con la rotellina del mouse
-    this.renderer.listen(this.carouselContainer.nativeElement, 'wheel', (event: WheelEvent) => {
-      if (event.deltaY > 0) {
-        this.scrollRight();
-      } else {
-        this.scrollLeft();
-      }
-    });
+    // Impostazione iniziale per lo scorrimento infinito
+    this.setupInfiniteScroll();
+  }
+
+  private setupInfiniteScroll() {
+    // Assicurati che ci siano abbastanza card per lo scorrimento infinito
+    const cards = this.carouselContainer.nativeElement.querySelectorAll('.cardWrapper');
+    if (cards.length < 3) {
+      console.error('Sono necessarie almeno tre card per lo scorrimento infinito.');
+      return;
+    }
+
+    // Clona le card per lo scorrimento infinito
+    const firstCard = cards[0].cloneNode(true);
+    const lastCard = cards[cards.length - 1].cloneNode(true);
+    this.carouselContainer.nativeElement.insertBefore(lastCard, this.carouselContainer.nativeElement.firstChild);
+    this.carouselContainer.nativeElement.appendChild(firstCard);
+  }
+
+  public scrollLeft() {
+    const cardWidth = this.carouselContainer.nativeElement.querySelector('.cardWrapper').offsetWidth;
+    this.carouselContainer.nativeElement.style.transition = 'none';
+    this.carouselContainer.nativeElement.scrollLeft -= cardWidth;
+
+    setTimeout(() => {
+      this.carouselContainer.nativeElement.style.transition = 'scroll 0.5s ease-out';
+      this.carouselContainer.nativeElement.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    }, 10);
+
+    // Sposta l'ultima card all'inizio dopo lo scorrimento
+    setTimeout(() => {
+      const cards = this.carouselContainer.nativeElement.querySelectorAll('.cardWrapper');
+      const lastCard = cards[cards.length - 1];
+      this.carouselContainer.nativeElement.insertBefore(lastCard, this.carouselContainer.nativeElement.firstChild);
+      this.carouselContainer.nativeElement.scrollLeft -= cardWidth;
+    }, 510);
+  }
+
+  public scrollRight() {
+    const cardWidth = this.carouselContainer.nativeElement.querySelector('.cardWrapper').offsetWidth;
+    this.carouselContainer.nativeElement.style.transition = 'scroll 0.5s ease-out';
+    this.carouselContainer.nativeElement.scrollBy({ left: cardWidth, behavior: 'smooth' });
+
+    // Sposta la prima card alla fine dopo lo scorrimento
+    setTimeout(() => {
+      const cards = this.carouselContainer.nativeElement.querySelectorAll('.cardWrapper');
+      const firstCard = cards[0];
+      this.carouselContainer.nativeElement.appendChild(firstCard);
+      this.carouselContainer.nativeElement.scrollLeft += cardWidth;
+    }, 510);
+  }
+
+  
+
+  public changeBackgroundForRow(event: MouseEvent, image: string, bgClass: string) {
+    const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
+    backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
+    backgroundContainer.classList.add('show-background', bgClass);
+  }
+  
+  public resetBackground(event: MouseEvent) {
+    const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
+    backgroundContainer.classList.remove('show-background', 'bg2', 'bg3');
   }
 
   public onItemMouseEnter(event: MouseEvent) {
@@ -47,32 +101,6 @@ export class CaroselloComponent implements OnInit {
     if (this.isTimeToUpdatePersp()) {
       this.updatePersp(event);
     }
-  }
-
-  public changeBackgroundForRow(event: MouseEvent, image: string, bgClass: string) {
-    const debouncedChange = this.debounce(() => {
-      const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
-      backgroundContainer.style.setProperty('--background-image-url', `url(${image})`);
-      backgroundContainer.classList.add('show-background', bgClass);
-    }, 160);
-    debouncedChange();
-  }
-  
-  public resetBackground(event: MouseEvent) {
-    const debouncedReset = this.debounce(() => {
-      const backgroundContainer = this.el.nativeElement.querySelector('.background-container');
-      backgroundContainer.classList.remove('show-background', 'bg2', 'bg3');
-    }, 160);
-    debouncedReset();
-  }
-
-  // Funzioni di scorrimento per il carosello
-  public scrollLeft() {
-    this.carouselContainer.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
-  }
-
-  public scrollRight() {
-    this.carouselContainer.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
 
   // Movimento della Card
@@ -128,7 +156,7 @@ export class CaroselloComponent implements OnInit {
     return false;
   }
 
-  private debounce(func: (...args: any[]) => void, wait: number): (...args: any[]) => void {
+  debounce(func: (...args: any[]) => void, wait: number): (...args: any[]) => void {
     let timeout: ReturnType<typeof setTimeout> | null = null;
     return function executedFunction(...args: any[]) {
       const later = () => {
@@ -142,5 +170,5 @@ export class CaroselloComponent implements OnInit {
       }
       timeout = setTimeout(later, wait);
     };
-  }
+  }  
 }
