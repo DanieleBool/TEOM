@@ -1,74 +1,49 @@
-import { Component, OnInit, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-carosello',
   templateUrl: './carosello.component.html',
   styleUrls: ['./carosello.component.css']
 })
-export class CaroselloComponent implements OnInit {
+export class CaroselloComponent {
+  @ViewChild('slickModal', { static: false }) slickModal!: SlickCarouselComponent;
+
+  slideConfig = {
+    "slidesToShow": 1, 
+    "slidesToScroll": 1,
+    "dots": true,
+    "infinite": true,
+    "autoplay": true,
+    "autoplaySpeed": 5000,
+    
+  };
+
+  nextSlide() {
+    this.slickModal.slickNext();
+  }
+
+  previousSlide() {
+    this.slickModal.slickPrev();
+  }
+  currentContainerBackground: string = 'defaultBackground'; // Aggiungi qui il tuo background predefinito
+
+  
   public currentPerspItem: any;
   public canUpdatePersp = true;
-  public currentContainerBackground = 'default-background';
+  // public currentContainerBackground = 'default-background';
   public currentBackgroundImage = 'none';
   public showOverlay = false;
 
-  @ViewChild('carouselContainer') carouselContainer!: ElementRef;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
-  ngOnInit(): void {
-    // Impostazione iniziale per lo scorrimento infinito
-    this.setupInfiniteScroll();
-  }
-
-  private setupInfiniteScroll() {
-    // Assicurati che ci siano abbastanza card per lo scorrimento infinito
-    const cards = this.carouselContainer.nativeElement.querySelectorAll('.cardWrapper');
-    if (cards.length < 3) {
-      console.error('Sono necessarie almeno tre card per lo scorrimento infinito.');
-      return;
-    }
-
-    // Clona le card per lo scorrimento infinito
-    const firstCard = cards[0].cloneNode(true);
-    const lastCard = cards[cards.length - 1].cloneNode(true);
-    this.carouselContainer.nativeElement.insertBefore(lastCard, this.carouselContainer.nativeElement.firstChild);
-    this.carouselContainer.nativeElement.appendChild(firstCard);
-  }
-
-  public scrollLeft() {
-    const cardWidth = this.carouselContainer.nativeElement.querySelector('.cardWrapper').offsetWidth;
-    this.carouselContainer.nativeElement.style.transition = 'none';
-    this.carouselContainer.nativeElement.scrollLeft -= cardWidth;
-
-    setTimeout(() => {
-      this.carouselContainer.nativeElement.style.transition = 'scroll 0.5s ease-out';
-      this.carouselContainer.nativeElement.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    }, 10);
-
-    // Sposta l'ultima card all'inizio dopo lo scorrimento
-    setTimeout(() => {
-      const cards = this.carouselContainer.nativeElement.querySelectorAll('.cardWrapper');
-      const lastCard = cards[cards.length - 1];
-      this.carouselContainer.nativeElement.insertBefore(lastCard, this.carouselContainer.nativeElement.firstChild);
-      this.carouselContainer.nativeElement.scrollLeft -= cardWidth;
-    }, 510);
-  }
-
-  public scrollRight() {
-    const cardWidth = this.carouselContainer.nativeElement.querySelector('.cardWrapper').offsetWidth;
-    this.carouselContainer.nativeElement.style.transition = 'scroll 0.5s ease-out';
-    this.carouselContainer.nativeElement.scrollBy({ left: cardWidth, behavior: 'smooth' });
-
-    // Sposta la prima card alla fine dopo lo scorrimento
-    setTimeout(() => {
-      const cards = this.carouselContainer.nativeElement.querySelectorAll('.cardWrapper');
-      const firstCard = cards[0];
-      this.carouselContainer.nativeElement.appendChild(firstCard);
-      this.carouselContainer.nativeElement.scrollLeft += cardWidth;
-    }, 510);
-  }
-
+  slides = [
+    { img: "assets/cards_img/Article1.png", bgClass: 'bg1' },
+    { img: "assets/cards_img/Article2.png", bgClass: 'bg2' },
+    { img: "assets/cards_img/Article3.png", bgClass: 'bg3' },
+    // Aggiungi qui altre slides
+  ];
   
 
   public changeBackgroundForRow(event: MouseEvent, image: string, bgClass: string) {

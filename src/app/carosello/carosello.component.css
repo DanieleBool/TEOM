@@ -4,14 +4,14 @@
     width: 100%;
     height: 100%;
 }
-  
+
 .background-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
     background-color: #112130;
     transition: opacity 1s ease-in-out;
 }
@@ -44,13 +44,13 @@
 
 .carouselContainer {
     transition: scroll 0.5s ease-out;
-  }
+}
   
 
 .row {
     display: flex;
     align-items: center;
-    padding: 70px 0 70px 0;
+    padding: 35px 0 35px 0;
     perspective: 1000px;
     position: relative;
     width: auto;
@@ -64,9 +64,9 @@
 .card {
     display: flex;
     background: linear-gradient(to top, #2D5CA6, #112130);
-    border-radius: 38px;
-    padding: 10px;
-    width: 520px; /* Larghezza delle card */
+    border-radius: 35px;
+    padding: 25px;
+    width: 820px; /* Larghezza delle card */
     justify-content: center;
     transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out;
     user-select: none;
@@ -79,7 +79,7 @@
 img {
     height: 100%;
     width: 100%;
-    border-radius: 38px;
+    border-radius: 30px;
     border: 2px solid white;
 }
   
@@ -89,20 +89,27 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 24px;
+    border-radius: 50%;
+    font-size: 30px;
     color: white;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    display: block; /* Assicura che siano sempre visibili */
+    border: 4px solid #ffffff;
+    display: block;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace
 }
   
 .left-arrow {
-    left: 10px;
+    left: 130px;
 }
   
 .right-arrow {
-    right: 10px;
+    right: 130px;
 }
 
 .carouselContainer {
@@ -117,4 +124,15 @@ img {
     flex: 0 0 100%; /* Ogni card occupa l'intera larghezza del container */
     display: flex;
     justify-content: center; /* Centra il contenuto della card */
-  }
+}
+
+
+  
+  .slick-dots li button:before {
+    background-color: #FFC425 !important;
+    height: 10px;
+    width: 10px;
+    text-indent: -9999px !important;
+    overflow:hidden; 
+    display: block;
+    }

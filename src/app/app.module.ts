@@ -11,6 +11,8 @@ import { FooterHeroComponent } from './footer-hero/footer-hero.component';
 import { FormsModule } from '@angular/forms';
 import { TrailerComponent } from './trailer/trailer.component';
 import { CaroselloComponent } from './carosello/carosello.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { UnitsComponent } from './units/units.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { CaroselloComponent } from './carosello/carosello.component';
     FooterHeroComponent,
     TrailerComponent,
     CaroselloComponent,
+    UnitsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

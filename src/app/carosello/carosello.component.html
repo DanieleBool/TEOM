@@ -1,43 +1,26 @@
 <div class="container-wrapper">
-    <div class="background-container" [ngClass]="currentContainerBackground"></div>
-    <div class="container">
-      <div class="card-section">
-        <!-- Freccia Sinistra per lo Scroll -->
-        <div class="arrow left-arrow" (click)="scrollLeft()">&#10094;</div>
-  
-        <!-- Container del Carosello -->
-        <div class="carouselContainer" #carouselContainer>
-          <!-- Wrapper per la Prima Card -->
-          <div class="cardWrapper">
-            <div class="row bg1" (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article1.png', 'bg1')" (mouseleave)="resetBackground($event)">
-              <div class="col card" (mouseenter)="onItemMouseEnter($event)" (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
-                <img src="assets/cards_img/Article1.png" alt="Card 1">
-              </div>
-            </div>
-          </div>
-  
-          <!-- Wrapper per la Seconda Card -->
-          <div class="cardWrapper">
-            <div class="row bg2" (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article2.png', 'bg2')" (mouseleave)="resetBackground($event)">
-              <div class="col card" (mouseenter)="onItemMouseEnter($event)" (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
-                <img src="assets/cards_img/Article2.png" alt="Card 2">
-              </div>
-            </div>
-          </div>
+  <div class="arrow left-arrow" (click)="previousSlide()">&#10094;</div>
+  <div class="arrow right-arrow" (click)="nextSlide()">&#10095;</div>
+  <div class="background-container" [ngClass]="currentContainerBackground"></div>
+  <div class="container">
+    <div class="card-section">
+      
+      <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+        
+        <div ngxSlickItem *ngFor="let slide of slides" class="cardWrapper">
           
-          <!-- Wrapper per la Terza Card -->
-          <div class="cardWrapper">
-            <div class="row bg3" (mouseenter)="changeBackgroundForRow($event, '../../assets/cards_img/Article3.png', 'bg3')" (mouseleave)="resetBackground($event)">
-              <div class="col card" (mouseenter)="onItemMouseEnter($event)" (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
-                <img src="assets/cards_img/Article3.png" alt="Card 3">
-              </div>
+          <div class="row" [ngClass]="slide.bgClass" 
+               (mouseenter)="changeBackgroundForRow($event, slide.img, slide.bgClass)" 
+               (mouseleave)="resetBackground($event)">
+
+            <div class="col card" (mouseenter)="onItemMouseEnter($event)" 
+                 (mouseleave)="onItemMouseLeave($event)" (mousemove)="onItemMouseMove($event)">
+              <img [src]="slide.img" alt="">
             </div>
           </div>
         </div>
-  
-        <!-- Freccia Destra per lo Scroll -->
-        <div class="arrow right-arrow" (click)="scrollRight()">&#10095;</div>
-      </div>
+      </ngx-slick-carousel>
     </div>
   </div>
-  
+</div>
+

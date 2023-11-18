@@ -12,6 +12,8 @@
   clip-path: polygon(
     -140% -20%, 83% 12%, 100% 0%, 100% 100%, 15% 88%, 0% 100%, 0 0%, 0 20px
   );
+  z-index: 4;
+    position: relative;
 }
 
 .contact-card {
@@ -198,7 +200,7 @@ input::placeholder, textarea::placeholder {
   justify-content: center;
   position: relative;
   height: 66px; /* altezza bottone */
-  width: 140px;
+  width: 180px;
 }
 
 .submit-button:active {
@@ -214,7 +216,7 @@ input::placeholder, textarea::placeholder {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) skewX(-9deg);
   z-index: 2;
   display: block;
   font-weight: 800;

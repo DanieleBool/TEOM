@@ -1,0 +1,82 @@
+.units, .bots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.units{
+    position: relative;
+
+}
+
+/* Assicurati che l'immagine e altri contenuti siano al di sopra dello sfondo */
+.units img, .units .cont-desc {
+    position: relative;
+    z-index: 2; /* Più alto rispetto al pseudo-elemento */
+}
+
+.units::before {
+    content: ""; /* Necessario per generare il pseudo-elemento */
+    position: absolute; /* Posiziona il pseudo-elemento rispetto al suo contenitore */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: aqua; /* Sostituisci con il colore di sfondo desiderato */
+    clip-path: polygon(-140% -40%, 85% 30%, 100% 0%, 100% 100%, 100% 75%, 16% 100%, 0 80%, 0 20px);
+    /* Ripristina il tuo originale clip-path o adattalo come necessario */
+    z-index: 1; /* Posiziona lo sfondo dietro agli altri contenuti */
+}
+
+.bots{
+    height: 350px;
+    background-color: rgb(255, 98, 0);
+    margin-top: -84px;
+}
+
+.desc-wrap{
+    width: 700px;
+    display: flex;
+    position: relative;
+}
+
+img{
+    height: 370px;
+    z-index: 2;
+    position: relative;
+}
+
+.bots img{
+    margin-right: -50px
+}
+
+.units img{
+    margin-left: -50px;
+    z-index: 50;
+    position: relative;
+}
+
+.cont-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+
+}
+
+.desc{
+    padding: 20px 30px;
+    border-radius: 25px;
+    background-color: aquamarine;
+    color: white;
+}
+
+.bots .desc{
+    background-color: rosybrown;
+}
+
+h1{
+    color: black;
+    font-style: italic;
+}
