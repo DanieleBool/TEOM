@@ -12,11 +12,10 @@ export class CaroselloComponent {
   slideConfig = {
     "slidesToShow": 1, 
     "slidesToScroll": 1,
-    "dots": true,
+    "dots": false,
     "infinite": true,
     "autoplay": true,
-    "autoplaySpeed": 5000,
-    
+    "autoplaySpeed": 5200,
   };
 
   nextSlide() {
@@ -26,7 +25,7 @@ export class CaroselloComponent {
   previousSlide() {
     this.slickModal.slickPrev();
   }
-  currentContainerBackground: string = 'defaultBackground'; // Aggiungi qui il tuo background predefinito
+  currentContainerBackground: string = 'defaultBackground'; // Bbackground predefinito
 
   
   public currentPerspItem: any;
@@ -42,7 +41,6 @@ export class CaroselloComponent {
     { img: "assets/cards_img/Article1.png", bgClass: 'bg1' },
     { img: "assets/cards_img/Article2.png", bgClass: 'bg2' },
     { img: "assets/cards_img/Article3.png", bgClass: 'bg3' },
-    // Aggiungi qui altre slides
   ];
   
 

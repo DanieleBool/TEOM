@@ -1,0 +1,129 @@
+.row {
+    height: 550px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    /* flex: 0 0 30%; */
+}
+
+/* DESCRIZIONE */
+
+.description {
+    padding: 19px 45px 20px 43px; /* da questo dipende l'altezza dello scettro */
+    width: 370px;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+    /* margin-right: 40px; */
+    margin-right: -150%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    z-index: 10;
+}
+
+.desc2{
+    margin-right: 0%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-left: -150%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+}
+
+.back1 {
+    background-color: rgb(20,26,14);
+}
+
+.back2 {
+    background-color: rgb(13,21,32);
+}
+
+.back3 {
+    background-color: rgb(93,22,16);
+}
+
+.scettro {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 10px 20px 10px;
+}
+
+.pallino {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(#FFBB00 60%, #f89b00);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row:hover .pallino {
+    transform: scale(1.3);
+}
+
+.lineetta {
+    flex-grow: 1;
+    width: 2.7px;
+    background-color: #FFBB00;
+    background: linear-gradient(rgb(255, 187, 0, 0.5), transparent);
+}
+
+.description h2 {
+    background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(17, 33, 48));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: -2px;
+    transform: skewX(-9deg);
+    transition: padding-left 0.3s ease-in-out;
+    user-select: none;
+}
+
+.row:hover h2 {
+    padding-left: 8px;
+}
+
+.description h4 {
+    color: #FFBB00;
+    margin-bottom: 8px;
+}
+
+.img-col {
+    flex: 0 0 80%; /* non permette la crescita o la riduzione */
+    position: relative;
+}
+
+.img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* DISSOLVENZA */
+
+.img-col::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(20,26,14) 99%);
+    pointer-events: none;
+}
+
+.dissolve2::after{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(13,21,32) 99%);
+}
+
+.dissolve3::after{
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(93,22,16) 99%);
+}
