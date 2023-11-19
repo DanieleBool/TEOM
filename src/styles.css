@@ -8,6 +8,10 @@
     /* cursor: none; */
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* Barra di scorrimento principale */
 ::-webkit-scrollbar {
     width: 10px;
