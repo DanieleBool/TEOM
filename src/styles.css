@@ -6,6 +6,7 @@
     font-family: 'Bebas Neue', sans-serif;
     cursor: url('../src/assets/Cursor/Normal2.png'), auto !important;
     /* cursor: none; */
+    /* box-sizing: border-box; */
 }
 
 body{
@@ -35,3 +36,11 @@ body{
 }
 
 /* background: linear-gradient(rgb(255, 187, 0, 0.5), transparent); */
+
+img {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-Prefixed Version */
+    pointer-events: none;
+}

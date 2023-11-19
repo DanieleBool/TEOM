@@ -9,6 +9,7 @@
     position: relative;
     margin-top: -132px;
     height: 440px;
+    user-select: none;
 }
 
 .units img, .units .cont-desc {
@@ -33,6 +34,7 @@
     /* background-color: rgb(255, 98, 0); */
     background: linear-gradient(to right, rgb(229,95,58), rgb(105,33,18) 60%);
     margin-top: -112px;
+    user-select: none;
     /* clip-path: polygon(-140% -40%, 85% 30%, 100% 0%, 100% 100%,0 100%, 100% 100%, 100% 90%, 0 80%); */
 }
 

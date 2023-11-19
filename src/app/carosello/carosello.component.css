@@ -81,7 +81,7 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
+    user-select: none;
     z-index: 1000;
     height: 150px;
     align-items: center;

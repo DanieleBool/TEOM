@@ -6,21 +6,18 @@
         url('../../assets/img/Header.png');
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
 }
 
-.center-logo {
-    z-index: 1;
-}
 
-.center-logo img {
-    height: 350px;
+.logo img {
+    height: 298px;
     padding-top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    box-sizing: border-box;
 }
 
-/* Submit */
+/* SUBMIT */
 
 .submit-button {
     z-index: 1;
@@ -33,20 +30,70 @@
     cursor: pointer;
     background: linear-gradient(#FFBB00, #f89b00);
     transition: transform 0.2s ease-in-out;
-    transform: skewX(-9deg);
-    /* erano nel button-wrapper */
+    transform: skewX(-10deg);
     position: absolute;
     top: 700px;
-    height: 80px;
+    height: 75px;
     width: 200px;
 }
 
 .submit-button:active {
     background: #FFCC24;
 }
-  
-/* Al passaggio del mouse, ingrandisci il pulsante */
-.button-wrapper:hover .submit-button {
+
+.submit-button:hover {
     transform: skewX(-9deg) scale(1.1);
 }
-  
+
+img{
+    position: absolute;
+}
+
+.core{
+    height: 430px;
+    top: 310px;
+}
+.k41{
+    height: 200px;
+    top: 285px;
+    left: 4%;
+}
+.clock{
+    height: 390px;
+    top: 410px;
+    left: 500px;
+}
+.aiden{
+    height: 425px;
+    top: 410px;
+    left: 62px;
+}
+
+.btnWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Wrapper2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Wrapper3{
+    width: 900px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.core, .logo, .k41, .clock, .aiden {
+    will-change: transform;
+  }
