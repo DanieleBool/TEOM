@@ -19,3 +19,34 @@
     height: 350px;
     padding-top: 50px;
 }
+
+/* Submit */
+
+.submit-button {
+    z-index: 1;
+    width: 100%;
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
+    box-shadow: rgb(255, 206, 72, 0.5) 0px 0px 14px 6px inset;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(#FFBB00, #f89b00);
+    transition: transform 0.2s ease-in-out;
+    transform: skewX(-9deg);
+    /* erano nel button-wrapper */
+    position: absolute;
+    top: 700px;
+    height: 80px;
+    width: 200px;
+}
+
+.submit-button:active {
+    background: #FFCC24;
+}
+  
+/* Al passaggio del mouse, ingrandisci il pulsante */
+.button-wrapper:hover .submit-button {
+    transform: skewX(-9deg) scale(1.1);
+}
+  
