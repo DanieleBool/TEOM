@@ -9,30 +9,21 @@ export class HeroComponent {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event) {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    // Aggiorna la posizione di .core
-    this.applyParallaxEffect('.core', scrollPosition, 0.05);
-
-    // Aggiorna la posizione di .logo
-    this.applyParallaxEffect('.logo', scrollPosition, 0.2);
-
-    // Aggiorna la posizione di .k41
-    this.applyParallaxEffect('.k41', scrollPosition, 0.05);
-
-    // Aggiorna la posizione di .clock
-    this.applyParallaxEffect('.clock', scrollPosition, 0.1);
-
-    // Aggiorna la posizione di .aiden
-    this.applyParallaxEffect('.aiden', scrollPosition, 0.15);
+    // "Risucchia" l'immagine  più velocemente verso l'alto
+    this.applyParallaxSuctionEffect('.core', scrollPosition, 0.8);
+    this.applyParallaxSuctionEffect('.logo', scrollPosition, 0.6);
+    this.applyParallaxSuctionEffect('.k41', scrollPosition, 0.5);
+    this.applyParallaxSuctionEffect('.clock', scrollPosition, 0.4);
+    this.applyParallaxSuctionEffect('.aiden', scrollPosition, 0.3);
   }
 
-  private applyParallaxEffect(selector: string, scrollPosition: number, rate: number): void {
+  private applyParallaxSuctionEffect(selector: string, scrollPosition: number, rate: number): void {
     const element = document.querySelector(selector);
     if (element) {
-      const adjustedPosition = scrollPosition * rate;
+      const adjustedPosition = -(scrollPosition * rate);
       element.setAttribute('style', `transform: translateY(${adjustedPosition}px)`);
     }
   }
 }
-
