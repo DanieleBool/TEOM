@@ -12,11 +12,12 @@ export class HeroComponent {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     // "Risucchia" l'immagine  più velocemente verso l'alto
-    this.applyParallaxSuctionEffect('.core', scrollPosition, 0.8);
-    this.applyParallaxSuctionEffect('.logo', scrollPosition, 0.6);
-    this.applyParallaxSuctionEffect('.k41', scrollPosition, 0.5);
-    this.applyParallaxSuctionEffect('.clock', scrollPosition, 0.4);
-    this.applyParallaxSuctionEffect('.aiden', scrollPosition, 0.3);
+    this.applyParallaxSuctionEffect('.core', scrollPosition, -0.2);
+    this.applyParallaxSuctionEffect('.logo', scrollPosition, -0.3);
+    this.applyParallaxSuctionEffect('.k41', scrollPosition, -0.1);
+    this.applyParallaxSuctionEffect('.clock', scrollPosition, -0.05);
+    this.applyParallaxSuctionEffect('.aiden', scrollPosition, 0.0);
+    this.applyParallaxSuctionEffect('.btnWrapper', scrollPosition, 0.05);
   }
 
   private applyParallaxSuctionEffect(selector: string, scrollPosition: number, rate: number): void {

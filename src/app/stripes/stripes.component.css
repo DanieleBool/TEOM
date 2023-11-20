@@ -12,7 +12,7 @@
     align-items: center;
     color: white;
     /* width: 100%; */
-    /* flex: 0 0 30%; */
+    /* flex: 10%; */
 }
 
 /* DESCRIZIONE */
@@ -24,13 +24,15 @@
     position: relative;
     box-sizing: border-box;
     /* margin-right: 40px; */
-    margin-right: -50%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-right: -250%; /* DESCRIZIONE SOPRA IL BACKGROUND */
     z-index: 10;
+    font-family: Bebas Neue Pro;
+    font-weight: 400;
 }
 
 .desc2{
     margin-right: 0%; /* DESCRIZIONE SOPRA IL BACKGROUND */
-    margin-left: -50%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-left: -250%; /* DESCRIZIONE SOPRA IL BACKGROUND */
 }
 
 .back1 {
@@ -78,6 +80,7 @@
 .description h2 {
     background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(17, 33, 48));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 40px;
     margin-bottom: -2px;

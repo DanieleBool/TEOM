@@ -1,16 +1,18 @@
 .hero-section {
-    height: 100vh;
+    height: 96vh;
     user-select: none;
     background-image: 
         linear-gradient(to bottom, transparent, rgb(17, 33, 48)),
         url('../../assets/img/Header.png');
     background-size: cover;
-    background-position: center;
+    /* background-position: 90px; */
+    /* background-size: 95% 95%; */
 }
 
 .logo img {
     height: 298px;
-    padding-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     left: 50%;
     transform: translate(-50%);
     box-sizing: border-box;
@@ -55,21 +57,25 @@ img{
 .core{
     height: 430px;
     top: 310px;
+    left: 250px;
+    z-index: 0;
 }
 .k41{
     height: 200px;
-    top: 285px;
+    top: 270px;
     left: 4%;
 }
 .clock{
     height: 390px;
-    top: 410px;
+    top: 400px;
     left: 500px;
+    z-index: 3;
 }
 .aiden{
     height: 425px;
     top: 410px;
     left: 62px;
+    z-index: 3;
 }
 
 .btnWrapper{
@@ -78,6 +84,7 @@ img{
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 4000;
 }
 
 .Wrapper2{

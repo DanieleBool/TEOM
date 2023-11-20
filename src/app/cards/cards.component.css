@@ -132,6 +132,7 @@ img {
 .description h2 {
   background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(17, 33, 48));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
   margin-bottom: -2px;

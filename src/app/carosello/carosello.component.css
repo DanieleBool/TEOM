@@ -7,7 +7,7 @@
 
 .container {
     position: relative;
-    width: 1300px;
+    width: 1230px;
     margin: auto;
 }
 
@@ -99,11 +99,11 @@ img {
 }
   
 .left-arrow {
-    left: 40px;
+    left: 0px;
 }
   
 .right-arrow {
-    right: 40px;
+    right: 0px;
 }
 
 .carouselContainer {
@@ -115,7 +115,7 @@ img {
 
 .text-container {
     position: absolute;
-    left: 217px;
+    left: 183px;
     top: 80px;
     color: white;
     z-index: 10;
