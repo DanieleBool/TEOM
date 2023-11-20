@@ -4,13 +4,13 @@
   background-image: url("src\assets\bg\BG_Blur.png");
   background-size: cover;
   margin-top: -100px;
-  padding-top: 5px;
-  margin-bottom: -106px;
-  padding-bottom: 55px;
-  height: 770px;
+  padding-top: 90px;
+  /* margin-bottom: -106px; */
+  padding-bottom: 10px;
+  height: 670px;
   display: flex;
   clip-path: polygon(
-    -140% -10%, 83% 10%, 100% 0%, 100% 100%, 15% 88%, 0% 100%, 0 0%, 0 20px
+    -140% -10%, 83% 10%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0 0%, 0 0px
   );
   z-index: 4;
     position: relative;
@@ -53,6 +53,8 @@
   -webkit-text-fill-color: transparent;
   font-size: 40px;
   transform: skewX(-10deg);
+  text-shadow: 0 0px 40px rgba(0, 0, 0, 0.3)
+
 }
 
 /*__INPUT____________________________________________________________________________*/

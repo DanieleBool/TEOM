@@ -16,6 +16,9 @@ export class CaroselloComponent {
     "infinite": true,
     "autoplay": true,
     "autoplaySpeed": 5200,
+    prevArrow: false,
+    nextArrow: false
+
   };
 
   nextSlide() {

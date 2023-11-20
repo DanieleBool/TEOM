@@ -5,6 +5,12 @@
     height: 100%;
 }
 
+.container {
+    position: relative;
+    width: 1300px;
+    margin: auto;
+}
+
 .background-container {
     position: absolute;
     top: 0;
@@ -84,6 +90,7 @@ img {
     user-select: none;
     z-index: 1000;
     height: 150px;
+    width: 150px;
     align-items: center;
 }
 
@@ -92,11 +99,11 @@ img {
 }
   
 .left-arrow {
-    left: 120px;
+    left: 40px;
 }
   
 .right-arrow {
-    right: 120px;
+    right: 40px;
 }
 
 .carouselContainer {
@@ -108,7 +115,7 @@ img {
 
 .text-container {
     position: absolute;
-    left: 20%;
+    left: 217px;
     top: 80px;
     color: white;
     z-index: 10;

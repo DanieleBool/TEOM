@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    width: 100%;
+    /* width: 100%; */
     /* flex: 0 0 30%; */
 }
 
@@ -24,13 +24,13 @@
     position: relative;
     box-sizing: border-box;
     /* margin-right: 40px; */
-    margin-right: -150%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-right: -50%; /* DESCRIZIONE SOPRA IL BACKGROUND */
     z-index: 10;
 }
 
 .desc2{
     margin-right: 0%; /* DESCRIZIONE SOPRA IL BACKGROUND */
-    margin-left: -150%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-left: -50%; /* DESCRIZIONE SOPRA IL BACKGROUND */
 }
 
 .back1 {
@@ -96,7 +96,7 @@
 }
 
 .img-col {
-    flex: 0 0 80%; /* non permette la crescita o la riduzione */
+    flex:  70%; /* non permette la crescita o la riduzione */
     position: relative;
 }
 

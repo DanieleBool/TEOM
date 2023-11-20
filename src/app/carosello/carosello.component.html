@@ -1,18 +1,17 @@
 <div class="container-wrapper">
-  <div class="text-container">
-    <h2>Screenshots</h2>
-    <h4>Guarda ora il trailer aggiornato</h4>
-  </div>
-
+  <div class="background-container" [ngClass]="currentContainerBackground"></div>
+  
+  <div class="container">
+    <div class="text-container">
+      <h2>Screenshots</h2>
+      <h4>Guarda ora il trailer aggiornato</h4>
+    </div>
   <div class="arrow left-arrow" (click)="previousSlide()">
     <img src="/assets/Images/Icon_Previous.png" alt="Previous">
   </div>
   <div class="arrow right-arrow" (click)="nextSlide()">
     <img src="/assets/Images/Icon_Next.png" alt="Next">
-  </div>  
-  <div class="background-container" [ngClass]="currentContainerBackground"></div>
-  <div class="container">
-      
+  </div>      
       <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor="let slide of slides" class="cardWrapper">
           
