@@ -265,8 +265,8 @@ input::placeholder, textarea::placeholder {
 @media (max-width: 768px) {
   .container{
     margin-top: -100px;
-    padding-top: 90px;
-    padding-bottom: 10px;
+    padding-top: 35px;
+    padding-bottom: 0px;
     height: 670px;
     clip-path: polygon(
       0% 0%, -100% -0%, 100% 6%, 100% 100%, 0% 100%, 0% 100%, 0 0%, 0 0px
@@ -278,10 +278,10 @@ input::placeholder, textarea::placeholder {
   
   .contact-card {
     width: 100%;
-    height: 400px;
+    height: 492px;/*  altezza wrapper */
     max-width: 900px;
     padding: 0 3%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     border-radius: 45px;
     background: none;
   }
@@ -296,14 +296,7 @@ input::placeholder, textarea::placeholder {
     top: -25px;
     left: 50px;
     text-align: center;
-  }
-
-  .input-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    width: 100%;
-  }
+   }
   
   .form-wrapper form {
     margin: 0px 0px 0px;
@@ -312,8 +305,8 @@ input::placeholder, textarea::placeholder {
   .input-group label {
     display: block;
     /* font-size: 18px; */
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin-left: 17px;
+    margin-bottom: 5px;
   }
   
   .input-group input {
@@ -332,6 +325,26 @@ input::placeholder, textarea::placeholder {
   }
 
   .checkEndButtonContainer {
-    bottom: -33px;
+    bottom: -31px;
   }
+
+  .input-row {
+    flex-wrap: wrap;
+  }
+
+  .margin{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .checkbox{
+    width: 220px;
+  }
+
+  .header h2{
+    font-size: 45px;
+    margin-left: -25px;
+    margin-top: -6px;
+  }
+
 }

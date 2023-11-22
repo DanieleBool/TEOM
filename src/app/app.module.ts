@@ -12,6 +12,7 @@ import { CaroselloComponent } from './carosello/carosello.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { UnitsComponent } from './units/units.component';
 import { StripesComponent } from './stripes/stripes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { StripesComponent } from './stripes/stripes.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     SlickCarouselModule,
   ],
   providers: [],

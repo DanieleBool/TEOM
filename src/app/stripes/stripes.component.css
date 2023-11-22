@@ -165,14 +165,14 @@
 
     .description{
         font-size: 1.5rem;
-        width: 96%;
+        width: 94%;
         height: auto;
     }
     .h2{
         font-size: 2.5rem;
     }
     .row{
-        height: 38vh;
+        height: 25rem;
         position: relative;
     }
     .col{

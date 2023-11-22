@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-message-form',
@@ -6,22 +7,47 @@ import { Component } from '@angular/core';
   styleUrls: ['./message-form.component.css']
 })
 export class MessageFormComponent {
-
   isCheckboxChecked: boolean = false;
   isSubmitted: boolean = false;
   showError: boolean = false;
 
-  onSubmit(button: HTMLButtonElement) { // Aggiungi il parametro button per riferirsi al pulsante inviato
+  // Aggiungi le proprietà per raccogliere i dati del form
+  name: string = '';
+  email: string = '';
+  message: string = '';
+
+  // Inietta HttpClient nel costruttore
+  constructor(private http: HttpClient) {}
+
+  onSubmit(button: HTMLButtonElement) {
     if (this.isCheckboxChecked) {
       this.isSubmitted = true;
       this.showError = false;
-      // Aggiungi la classe per l'animazione del pulsante
+
+      // Prepara i dati da inviare
+      const formData = {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      };
+
+      // Invia i dati al tuo endpoint API Gateway
+      this.http.post('https://hsey0ho24k.execute-api.eu-north-1.amazonaws.com/fase1/email', formData).subscribe(
+        response => {
+          console.log('Email inviata con successo', response);
+          // Resetta il form qui se necessario
+        },
+        error => {
+          console.error('Errore nell\'invio dell\'email', error);
+        }
+      );
+
+      // Gestione dell'animazione del pulsante
       button.classList.add('submit-button-animate');
-      // Rimuovi la classe per l'animazione del pulsante dopo che l'animazione è terminata
       setTimeout(() => {
         button.classList.remove('submit-button-animate');
-      }, 1000); // L'animazione dura 0.6 secondi
-      // Hide the 'Inviato' message after 4 seconds
+      }, 1000);
+
       setTimeout(() => {
         this.isSubmitted = false;
       }, 3500);
