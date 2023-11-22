@@ -13,7 +13,12 @@
     -140% -10%, 83% 10%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0 0%, 0 0px
   );
   z-index: 4;
-    position: relative;
+  position: relative;
+}
+
+*{
+  font-family: Bebas Neue Pro;
+  font-weight: thin;  
 }
 
 .contact-card {
@@ -47,14 +52,14 @@
 
 .header h2 {
   padding: 0 0px;
-  background: -webkit-linear-gradient(white 37%, rgb(39, 39, 39));
-  /* linear-gradient(#f7d80c, #FFBB00, #f89b00); */
+  background: -webkit-linear-gradient(white 35%, rgba(255, 255, 255, 0.23));  /* linear-gradient(#f7d80c, #FFBB00, #f89b00); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
   transform: skewX(-10deg);
-  text-shadow: 0 0px 40px rgba(0, 0, 0, 0.3)
-
+  text-shadow: 0 10px 40px rgb(17, 33, 48);
+  font-family: 'Bebas neue';
+  
 }
 
 /*__INPUT____________________________________________________________________________*/
@@ -133,6 +138,8 @@ input::placeholder, textarea::placeholder {
   font-size: 18px;
   margin-left: 3px;
   user-select: none;
+  font-family: Bebas Neue Pro;
+  font-weight: thin;  
 }
 
 .checkbox a{
@@ -215,6 +222,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .submit-text {
+  font-family: Bebas Neue Pro;
+  font-weight: thin;  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -249,4 +258,80 @@ input::placeholder, textarea::placeholder {
 
 .submit-button-animate {
   animation: pulse-border 0.6s ease-out;
+}
+
+
+
+@media (max-width: 768px) {
+  .container{
+    margin-top: -100px;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    height: 670px;
+    clip-path: polygon(
+      0% 0%, -100% -0%, 100% 6%, 100% 100%, 0% 100%, 0% 100%, 0 0%, 0 0px
+    );
+    z-index: 4;
+    background: linear-gradient(to top, #2D5CA6, rgb(17, 33, 48));
+
+  }
+  
+  .contact-card {
+    width: 100%;
+    height: 400px;
+    max-width: 900px;
+    padding: 0 3%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 45px;
+    background: none;
+  }
+  
+  .form-wrapper {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 10% 5%;
+  }
+
+  .header {
+    top: -25px;
+    left: 50px;
+    text-align: center;
+  }
+
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .form-wrapper form {
+    margin: 0px 0px 0px;
+  }
+  
+  .input-group label {
+    display: block;
+    /* font-size: 18px; */
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 26px;
+    font-size: 18px;
+    height: 52px;
+    color: #eaeaea;
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+  
+  .margin{
+    margin-left: 0px;
+  }
+
+  .checkEndButtonContainer {
+    bottom: -33px;
+  }
 }

@@ -33,7 +33,7 @@
     transition: transform 0.2s ease-in-out;
     transform: skewX(-10deg);
     position: absolute;
-    top: 700px;
+    top: 650px;
     height: 75px;
     width: 200px;
     text-shadow: -3px -3px 0 #ea9400e6, 3px -3px 0 #ea9400e6, -3px 3px 0 #ea9400e6, 3px 3px 0 #ea9400e6, 0px 3px 0 #ea9400e6, 0px -3px 0 #ea9400e6, 3px 0px 0 #ea9400e6, -3px 0px 0 #ea9400e6;
@@ -55,26 +55,26 @@ img{
 }
 
 .core{
-    height: 430px;
-    top: 310px;
-    left: 250px;
+    height: 390px;
+    top: 280px;
+    left: 260px;
     z-index: 0;
 }
 .k41{
-    height: 200px;
-    top: 270px;
-    left: 4%;
+    height: 182px;
+    top: 240px;
+    left: 5%;
 }
 .clock{
-    height: 390px;
-    top: 400px;
-    left: 500px;
+    height: 350px;
+    top: 370px;
+    left: 510px;
     z-index: 3;
 }
 .aiden{
-    height: 425px;
-    top: 410px;
-    left: 62px;
+    height: 385px;
+    top: 370px;
+    left: 72px;
     z-index: 3;
 }
 
@@ -106,4 +106,51 @@ img{
 
 .core, .logo, .k41, .clock, .aiden {
     will-change: transform;
+}
+
+
+@media (max-width: 850px) {
+    .hero-section {
+      height: 100vh; /* Adjust height */
+      background-size: cover; /* Adjust background */
+      background-position: center;
+    }
+  
+    .logo img {
+      width: 19rem; /* Adjust logo size */
+      height: auto;
+    }
+  
+    .submit-button {
+      font-size: 2.5rem; /* Adjust font size */
+      width: 14rem; /* Adjust width */
+      top: 86vh; /* Adjust positioning */
+      bottom: 10px; /* Adjust positioning */
+      height: 5.5rem;
+    }
+  
+    /* Adjust parallax images */
+    .k41{
+        height: 33vw;
+        top: 51vh;
+        left: -1%;
+    }
+    .Wrapper3{
+        width: 95%;
+    }
+    .clock{
+        left: 54%;
+        top: 65vh;
+        height: 52vw;
+    }
+    .core{
+        left: 19%;
+        top: 53.6vh;
+        height: 68vw;
+    }
+    .aiden{
+        left: -3%;
+        top: 65vh;
+        height: 56vw;
+    }
 }

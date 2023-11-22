@@ -7,6 +7,8 @@
     cursor: url('../src/assets/Cursor/Normal2.png'), auto !important;
     /* cursor: none; */
     /* box-sizing: border-box; */
+    /* border: 1px solid red; */
+
 }
 
 @font-face {
@@ -15,7 +17,7 @@
   }
   
 body{
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* Barra di scorrimento principale */
@@ -25,7 +27,7 @@ body{
 
 /* Traccia della barra di scorrimento */
 ::-webkit-scrollbar-track {
-    background: #112130;
+    background: #182c3f;
     opacity: 90%;
 }
 

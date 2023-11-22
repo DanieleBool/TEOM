@@ -77,7 +77,13 @@ img{
     color: white;
     font-size: 19px;
     /* box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1) */
+    z-index: 50;
+    font-family: Bebas Neue Pro;
+}
 
+.desc p{
+    font-family: Bebas Neue Pro;
+    font-size: thin;
 }
 
 .bots .desc{
@@ -88,4 +94,79 @@ h1{
     color: #112130;
     font-style: italic;
     font-size: 45px;
+}
+
+
+@media (max-width: 768px) {
+    .imgsm {
+        /*height: 100%;  o un'altra dimensione a seconda delle tue esigenze */
+        width: 50%; /* mantiene il rapporto dell'immagine */
+        object-fit: cover;
+        object-position: right;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .bots .imgsm{
+        object-position: left;
+    }
+
+    .units{
+        justify-content: space-between;
+        height: 468px;
+        padding-bottom: 31px;
+    }
+    .bots{
+        height: 480px;
+        padding-top: 30px;
+    }
+
+    .container{
+        z-index: -1;
+        padding: 50px 0px;
+    }
+
+    .desc-wrap{
+        width: 100%;
+    }
+
+    .desc{
+        padding: 0% 4%;
+        background: none;
+        padding-bottom: 100px; /* Assieme */
+        margin-bottom: -100px; /* Assieme */
+        font-size: 19px;
+        width: 55vw;
+    }
+
+    .bots{
+        background: rgb(229,95,58);
+        justify-content: space-between;
+    }
+    .bots .desc{
+        background: none;
+    }
+
+    .units::before {
+        background: rgb(51,143,193);
+        clip-path: polygon(0% 0%, 0% 0%, 100% 6%, 100% 100%, 100% 85%, 0% 90%, 0 0%, 0 0px);
+
+    }
+    .cont-desc{
+        width: 50%;
+    }
+
+    h1{
+        color: #112130;
+        font-style: italic;
+        font-size: 4.1rem;
+        line-height: 3.4rem;
+    }
+    .desc p{
+        font-family: Bebas Neue Pro;
+        font-size: thin;
+        font-size: 1.8rem;
+    }
 }

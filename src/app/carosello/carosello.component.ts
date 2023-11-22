@@ -15,7 +15,7 @@ export class CaroselloComponent {
     "dots": false,
     "infinite": true,
     "autoplay": true,
-    "autoplaySpeed": 5200,
+    "autoplaySpeed": 3400,
     prevArrow: false,
     nextArrow: false
 

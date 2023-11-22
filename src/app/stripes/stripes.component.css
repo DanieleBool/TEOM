@@ -24,15 +24,19 @@
     position: relative;
     box-sizing: border-box;
     /* margin-right: 40px; */
-    margin-right: -250%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-right: -95%; /* DESCRIZIONE SOPRA IL BACKGROUND */
     z-index: 10;
+
+}
+
+.description p{
     font-family: Bebas Neue Pro;
-    font-weight: 400;
+    font-weight: thin;  
 }
 
 .desc2{
     margin-right: 0%; /* DESCRIZIONE SOPRA IL BACKGROUND */
-    margin-left: -250%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-left: -95%; /* DESCRIZIONE SOPRA IL BACKGROUND */
 }
 
 .back1 {
@@ -56,6 +60,8 @@
     flex-direction: column;
     align-items: center;
     padding: 34px 10px 20px 10px;
+    user-select: none;
+
 }
 
 .pallino {
@@ -64,6 +70,8 @@
     border-radius: 50%;
     background: linear-gradient(#FFBB00 60%, #f89b00);
     transition: transform 0.3s ease-in-out;
+    user-select: none;
+
 }
 
 .row:hover .pallino {
@@ -71,6 +79,7 @@
 }
 
 .lineetta {
+    user-select: none;
     flex-grow: 1;
     width: 2.7px;
     background-color: #FFBB00;
@@ -78,7 +87,7 @@
 }
 
 .description h2 {
-    background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(17, 33, 48));
+    background: -webkit-linear-gradient(white 35%, rgba(255, 255, 255, 0.20));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -96,6 +105,8 @@
 .description h4 {
     color: #FFBB00;
     margin-bottom: 8px;
+    font-family: Bebas Neue Pro;
+    font-weight: thin;  
 }
 
 .img-col {
@@ -130,3 +141,71 @@
 .dissolve3::after{
     background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(93,22,16) 99%);
 }
+
+
+/* Regole per dispositivi mobili */
+@media only screen and (max-width: 860px) {
+    .img-col img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .description {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70rem; /* O la larghezza che preferisci */
+    }
+
+    .desc2{
+        margin-left: 0;
+    }
+
+    .description{
+        font-size: 1rem;
+        width: 85%;
+        height: auto;
+    }
+    .h2{
+        font-size: 0.5rem;
+    }
+    .row{
+        height: 38vh;
+        position: relative;
+    }
+    .col{
+        height: auto;
+    }
+
+    .back1,.back2,.back3 {
+        background-color: rgba(20,26,14,0.6);
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .back1 {
+        background-color: rgba(20,26,14,0.65);
+    }
+    
+    .back2 {
+        background-color: rgba(13,21,32,0.65);
+    }
+    
+    .back3 {
+        background-color: rgba(93,22,16,0.65);
+    }
+
+    .img-col::after {
+        background: none;
+    }
+    
+}
+
+/* Regole per desktop */
+/* @media only screen and (min-width: 769px) { */
+    /* Regole specifiche per desktop */
+/* } */

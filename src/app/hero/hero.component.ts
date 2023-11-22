@@ -12,7 +12,7 @@ export class HeroComponent {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     // "Risucchia" l'immagine  più velocemente verso l'alto
-    this.applyParallaxSuctionEffect('.core', scrollPosition, -0.2);
+    this.applyParallaxSuctionEffect('.core', scrollPosition, -0.12);
     this.applyParallaxSuctionEffect('.logo', scrollPosition, -0.3);
     this.applyParallaxSuctionEffect('.k41', scrollPosition, -0.1);
     this.applyParallaxSuctionEffect('.clock', scrollPosition, -0.05);

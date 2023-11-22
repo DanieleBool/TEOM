@@ -102,3 +102,96 @@
 a.privacy-policy{
     color: black;
 }
+
+span{
+    font-family: Bebas Neue Pro;
+    font-size: thin;
+}
+
+.fab, .fa-brands {
+    font-weight: 900;
+}
+
+.footer2 img{
+    width: 5.4rem;
+    margin-bottom: -0.4rem;
+}
+
+
+
+@media (max-width: 600px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    
+    .footer1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+    
+    .col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .socials{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-list{
+        display: flex;
+        flex-wrap: column;
+        width: 100%;
+    }
+
+    .item {
+        margin-right: 5px;
+    }
+
+    .title{
+        /* flex-direction: initial; */
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+
+    }
+
+    .item:before
+    {
+        margin-left: 10px;
+    }
+
+    .footer2 p{
+        padding: 0 3%;
+    }
+
+    .title.socials{
+        display: none;
+    }
+
+    .fa-facebook:before, .fa-discord:before, .fa-instagram:before {
+        font-size: 30px;
+    }
+    .fab[_ngcontent-ng-c2697358794], .fa-brands[_ngcontent-ng-c2697358794] {
+        font-weight: 900;
+    }
+    .socials[_ngcontent-ng-c2697358794]   a[_ngcontent-ng-c2697358794] {
+        height: 30px;
+        border-radius: 6px;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 6px;
+    }
+}

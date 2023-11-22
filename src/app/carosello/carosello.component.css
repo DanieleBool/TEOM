@@ -1,8 +1,8 @@
 .container-wrapper {
     position: relative;
     /* padding: 200px 0 120px 0; */
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
 }
 
 .container {
@@ -122,8 +122,7 @@ img {
 }
 
 h2 {
-    background: -webkit-linear-gradient(white 26%, rgb(130, 130, 130), rgb(17, 33, 48));
-    -webkit-background-clip: text;
+    background: -webkit-linear-gradient(white 35%, rgba(255, 255, 255, 0.20));    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 40px;
     margin-bottom: -8px;
@@ -132,6 +131,8 @@ h2 {
 
 h4 {
     color: #FFBB00;
+    font-family: Bebas Neue Pro;
+    font-weight: thin;
 }
 
 
@@ -143,4 +144,46 @@ width: 10px;
 text-indent: -9999px !important;
 overflow:hidden; 
 display: block;
+}
+
+
+/* Media query per dispositivi con larghezza massima di 768px (es. tablet e smartphone) */
+@media (max-width: 1050px) {
+    .container {
+        width: 100%;
+    }
+    .container-wrapper{
+        padding: 70px 0;
+    }
+
+    .row {
+        margin: 87px 0 130px 0; /* Margini ridotti */
+        flex-direction: column;
+        padding: 5px; /* Padding ridotto */
+
+    }
+
+    .card {
+        width: 100%; 
+        padding: 15px; /* Padding ridotto */
+        width: auto;
+    }
+
+    .arrow {
+        height: 100px; /* Dimensione ridotta delle frecce */
+        width: 100px;
+    }
+
+    .text-container {
+        left: 15px; /* Posizionamento e dimensioni adattate */
+        right: 15px;
+        top: 30px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    .left-arrow, .right-arrow {
+        display: none;
+    }
 }
