@@ -181,17 +181,25 @@ span{
         display: none;
     }
 
-    .fa-facebook:before, .fa-discord:before, .fa-instagram:before {
+    .fa-facebook:before, .fa-instagram:before {
         font-size: 30px;
     }
-    .fab[_ngcontent-ng-c2697358794], .fa-brands[_ngcontent-ng-c2697358794] {
-        font-weight: 900;
+    .fa-discord:before{
+        font-size: 28px;
     }
-    .socials[_ngcontent-ng-c2697358794]   a[_ngcontent-ng-c2697358794] {
+    .fa-instagram {
+        font-weight: 800;
+        padding: 6px 3px 6px 3px;
+    }
+    .socials a {
         height: 30px;
         border-radius: 6px;
         margin-right: 10px;
         margin-left: 10px;
         padding: 6px;
     }
+    .socials a .fa-discord{
+        padding: 12px 0px 6px 0px;
+    }
+    
 }
