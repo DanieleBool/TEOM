@@ -98,28 +98,15 @@ h1{
 
 
 @media (max-width: 768px) {
-    .imgsm {
-        /*height: 100%;  o un'altra dimensione a seconda delle tue esigenze */
-        width: 50%; /* mantiene il rapporto dell'immagine */
-        object-fit: cover;
-        object-position: right;
-    }
 
-    img{
-        width: 100%;
-    }
-
-    .bots .imgsm{
-        object-position: left;
-    }
 
     .units{
         justify-content: space-between;
-        height: 468px;
+        height: 250px;
         padding-bottom: 31px;
     }
     .bots{
-        height: 480px;
+        height: 310px;
         padding-top: 30px;
     }
 
@@ -137,8 +124,14 @@ h1{
         background: none;
         padding-bottom: 100px; /* Assieme */
         margin-bottom: -100px; /* Assieme */
-        font-size: 19px;
+        font-size: 1rem;
         width: 55vw;
+    }
+
+    .units .desc{
+        margin-left: -42px;
+        z-index: 50;
+        position: relative;
     }
 
     .bots{
@@ -156,17 +149,51 @@ h1{
     }
     .cont-desc{
         width: 50%;
+        position: relative;
     }
+    .units img, .units .cont-desc{
+        position: relative;
+        z-index: 888888888888;
+    } 
 
     h1{
         color: #112130;
         font-style: italic;
-        font-size: 4.1rem;
-        line-height: 3.4rem;
+        font-size: 2.5rem;
+        line-height: 2.2rem;
     }
     .desc p{
         font-family: Bebas Neue Pro;
         font-size: thin;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+
+    }
+    .imgsm2{
+        width: 50%;
+    }
+    .imgsm{
+        margin-right: 0px;
+    }
+
+    .bots .imgsm {
+        margin-left: 18px;
+        object-position: left;
+        padding-top: 30px;
+
+    }
+    .units .imgsm{
+        margin-right: -33px; 
+        object-position: right;
+    }
+
+    img{
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        object-fit: cover;
+        height: 250px;
+    }
+    .bots .desc{
+        padding-top: 30px;
     }
 }
