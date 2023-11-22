@@ -31,11 +31,9 @@
 
 .bots{
     height: 420px;
-    /* background-color: rgb(255, 98, 0); */
     background: linear-gradient(to right, rgb(229,95,58), rgb(105,33,18) 60%);
     margin-top: -112px;
     user-select: none;
-    /* clip-path: polygon(-140% -40%, 85% 30%, 100% 0%, 100% 100%,0 100%, 100% 100%, 100% 90%, 0 80%); */
 }
 
 .desc-wrap{
@@ -70,13 +68,11 @@ img{
 .desc{
     padding: 20px 30px;
     border-radius: 35px;
-    /* background-color: rgb(42,111,152); */
     background: linear-gradient(to bottom, rgb(42,111,152), rgba(42,111,152, 0.01) 80%);
     padding-bottom: 100px; /* Assieme */
     margin-bottom: -100px; /* Assieme */
     color: white;
     font-size: 19px;
-    /* box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1) */
     z-index: 50;
     font-family: Bebas Neue Pro;
 }

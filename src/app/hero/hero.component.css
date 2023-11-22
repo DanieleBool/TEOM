@@ -5,8 +5,6 @@
         linear-gradient(to bottom, transparent, rgb(17, 33, 48)),
         url('../../assets/img/Header.png');
     background-size: cover;
-    /* background-position: 90px; */
-    /* background-size: 95% 95%; */
 }
 
 .logo img {
@@ -26,7 +24,6 @@
     color: white;
     font-weight: 800;
     font-size: 40px;
-    /* box-shadow: rgb(255, 206, 72, 0.5) 0px 0px 14px 6px inset; */
     border-radius: 25px;
     cursor: pointer;
     background: linear-gradient(#FFBB00, #f89b00);
@@ -37,8 +34,7 @@
     height: 75px;
     width: 200px;
     text-shadow: -3px -3px 0 #ea9400e6, 3px -3px 0 #ea9400e6, -3px 3px 0 #ea9400e6, 3px 3px 0 #ea9400e6, 0px 3px 0 #ea9400e6, 0px -3px 0 #ea9400e6, 3px 0px 0 #ea9400e6, -3px 0px 0 #ea9400e6;
-    /* box-shadow: rgb(255, 206, 72, 0.5) 0px 0px 14px 6px inset, 
-                0 10px 50px rgba(17, 33, 48, 0.5) outset; */
+
     box-shadow: inset 0px 0px 14px 6px #ffda48, 0 0 36px 20px #112130;
 }
 
@@ -122,14 +118,13 @@ img{
     }
   
     .submit-button {
-      font-size: 2.5rem; /* Adjust font size */
-      width: 14rem; /* Adjust width */
-      top: 86vh; /* Adjust positioning */
-      bottom: 10px; /* Adjust positioning */
+      font-size: 2.5rem;
+      width: 14rem;
+      top: 86vh;
+      bottom: 10px;
       height: 5.5rem;
     }
   
-    /* Adjust parallax images */
     .k41{
         height: 33vw;
         top: 51vh;

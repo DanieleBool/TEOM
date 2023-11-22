@@ -5,8 +5,6 @@
     scroll-behavior: smooth;
     font-family: 'Bebas Neue', sans-serif;
     cursor: url('../src/assets/Cursor/Normal2.png'), auto !important;
-    /* cursor: none; */
-    /* box-sizing: border-box; */
     /* border: 1px solid red; */
 
 }
@@ -41,13 +39,10 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: #ffd000;
 }
-
-/* background: linear-gradient(rgb(255, 187, 0, 0.5), transparent); */
-
 img {
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* Internet Explorer/Edge */
-    user-select: none;         /* Non-Prefixed Version */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     pointer-events: none;
 }

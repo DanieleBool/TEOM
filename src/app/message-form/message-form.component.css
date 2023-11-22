@@ -54,6 +54,7 @@
   padding: 0 0px;
   background: -webkit-linear-gradient(white 35%, rgba(255, 255, 255, 0.23));  /* linear-gradient(#f7d80c, #FFBB00, #f89b00); */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
   transform: skewX(-10deg);
@@ -157,6 +158,7 @@ input::placeholder, textarea::placeholder {
   border-radius: 5px;
   -webkit-appearance: none; /* Rimuove l'aspetto predefinito su Safari e Chrome */
   -moz-appearance: none; /* Rimuove l'aspetto predefinito su Firefox */
+  appearance: none;
 }
 
 /* .checkbox input[type="checkbox"]:checked {

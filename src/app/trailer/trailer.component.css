@@ -6,7 +6,6 @@ iframe {
 }
   
 .container {
-    /* background-color: #112130; */
     background: linear-gradient(to top, #112130 99%, rgba(17, 33, 48, 0));
     margin-top: -9px;
     display: flex;
@@ -18,10 +17,9 @@ iframe {
 }
 
 
-/* Media query per dispositivi con larghezza massima di 768px (es. tablet e smartphone) */
 @media (max-width: 768px) {
     .youtube{
-        height: 13rem !important;
+        height: 14rem !important;
         width: 99rem!important;
         border-radius: 0px;
     }

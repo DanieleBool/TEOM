@@ -11,7 +11,6 @@
 .col {
     display: flex;
     align-items: center;
-    /* margin-bottom: 16px; */
     line-height: 41px;
 }
 
@@ -63,7 +62,6 @@
     font-weight: normal;
     color: #7A7A7B;
     display: flex;
-    /* display: inline; */
 }
 
 .item .value {
@@ -73,7 +71,6 @@
 .item:before
 {
     content: ' ';
-    /* display: inline-block; */
     position: relative;
     top: 16px;
     left: -6px;
@@ -161,7 +158,6 @@ span{
     }
 
     .title{
-        /* flex-direction: initial; */
         width: 100%;
     }
 
