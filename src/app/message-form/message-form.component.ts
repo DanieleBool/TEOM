@@ -23,31 +23,32 @@ export class MessageFormComponent {
     if (this.isCheckboxChecked) {
       this.isSubmitted = true;
       this.showError = false;
-
+  
       // Prepara i dati da inviare
       const formData = {
         name: this.name,
         email: this.email,
         message: this.message
       };
-
+  
       // Invia i dati al tuo endpoint API Gateway
-      this.http.post('https://hsey0ho24k.execute-api.eu-north-1.amazonaws.com/fase1/email', formData).subscribe(
-        response => {
+      this.http.post('https://hsey0ho24k.execute-api.eu-north-1.amazonaws.com/fase1', formData).subscribe({
+        next: (response) => {
           console.log('Email inviata con successo', response);
           // Resetta il form qui se necessario
         },
-        error => {
+        error: (error) => {
           console.error('Errore nell\'invio dell\'email', error);
-        }
-      );
-
+        },
+        complete: () => console.log('Richiesta completata') // Opzionale
+      });
+  
       // Gestione dell'animazione del pulsante
       button.classList.add('submit-button-animate');
       setTimeout(() => {
         button.classList.remove('submit-button-animate');
       }, 1000);
-
+  
       setTimeout(() => {
         this.isSubmitted = false;
       }, 3500);
@@ -55,4 +56,5 @@ export class MessageFormComponent {
       this.showError = true;
     }
   }
+  
 }

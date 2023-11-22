@@ -24,7 +24,7 @@
     position: relative;
     box-sizing: border-box;
     /* margin-right: 40px; */
-    margin-right: -95%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-right: -115%; /* DESCRIZIONE SOPRA IL BACKGROUND */
     z-index: 10;
 
 }
@@ -36,7 +36,7 @@
 
 .desc2{
     margin-right: 0%; /* DESCRIZIONE SOPRA IL BACKGROUND */
-    margin-left: -95%; /* DESCRIZIONE SOPRA IL BACKGROUND */
+    margin-left: -115%; /* DESCRIZIONE SOPRA IL BACKGROUND */
 }
 
 .back1 {

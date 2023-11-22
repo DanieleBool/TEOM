@@ -347,4 +347,13 @@ input::placeholder, textarea::placeholder {
     margin-top: -6px;
   }
 
+  .contact-card {
+    width: 100%;
+    height: 492px;/*  altezza wrapper */
+    max-width: 900px;
+    padding: 0 3%;
+    box-shadow: none;
+    border-radius: 45px;
+    background: none;
+  }
 }

@@ -33,7 +33,7 @@
     transition: transform 0.2s ease-in-out;
     transform: skewX(-10deg);
     position: absolute;
-    top: 650px;
+    top: 44.5rem;
     height: 75px;
     width: 200px;
     text-shadow: -3px -3px 0 #ea9400e6, 3px -3px 0 #ea9400e6, -3px 3px 0 #ea9400e6, 3px 3px 0 #ea9400e6, 0px 3px 0 #ea9400e6, 0px -3px 0 #ea9400e6, 3px 0px 0 #ea9400e6, -3px 0px 0 #ea9400e6;
@@ -55,26 +55,26 @@ img{
 }
 
 .core{
-    height: 390px;
-    top: 280px;
+    height: 410px;
+    top: 20.5rem;
     left: 260px;
     z-index: 0;
 }
 .k41{
-    height: 182px;
-    top: 240px;
-    left: 5%;
+    height: 184px;
+    top:20rem;
+    left: 6%;
 }
 .clock{
     height: 350px;
-    top: 370px;
-    left: 510px;
+    top: 28.2rem;
+    left: 495px;
     z-index: 3;
 }
 .aiden{
     height: 385px;
-    top: 370px;
-    left: 72px;
+    top: 28rem;
+    left: 84px;
     z-index: 3;
 }
 
