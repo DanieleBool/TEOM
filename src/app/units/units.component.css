@@ -8,7 +8,7 @@
 .units{
     position: relative;
     margin-top: -132px;
-    height: 440px;
+    height: 439px;
     user-select: none;
 }
 
@@ -150,7 +150,7 @@ h1{
     .units img, .units .cont-desc{
         position: relative;
         z-index: 888888888888;
-    } 
+    }
 
     h1{
         color: #112130;
@@ -178,7 +178,7 @@ h1{
 
     }
     .units .imgsm{
-        margin-right: -33px; 
+        margin-right: -33px;
         object-position: right;
     }
 
