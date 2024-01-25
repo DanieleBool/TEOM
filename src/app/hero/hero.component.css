@@ -1,5 +1,5 @@
 .hero-section {
-    height: 96vh;
+    height: 96dvh;
     user-select: none;
     background-image: 
         linear-gradient(to bottom, transparent, rgb(17, 33, 48)),
@@ -107,7 +107,7 @@ img{
 
 @media (max-width: 850px) {
     .hero-section {
-      height: 100vh; /* Adjust height */
+      height: 100dvh; /* Adjust height */
       background-size: cover; /* Adjust background */
       background-position: center;
     }
@@ -120,14 +120,14 @@ img{
     .submit-button {
       font-size: 2.5rem;
       width: 14rem;
-      top: 86vh;
+      top: 86dvh;
       bottom: 10px;
       height: 5.5rem;
     }
   
     .k41{
         height: 33vw;
-        top: 51vh;
+        top: 51dvh;
         left: -1%;
     }
     .Wrapper3{
@@ -135,17 +135,17 @@ img{
     }
     .clock{
         left: 54%;
-        top: 65vh;
+        top: 65dvh;
         height: 52vw;
     }
     .core{
         left: 19%;
-        top: 53.6vh;
+        top: 53.6dvh;
         height: 68vw;
     }
     .aiden{
         left: -4%;
-        top: 65vh;
+        top: 65dvh;
         height: 62vw;
     }
 }

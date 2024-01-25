@@ -15,10 +15,9 @@ export class CaroselloComponent {
     "dots": false,
     "infinite": true,
     "autoplay": true,
-    "autoplaySpeed": 3400,
+    "autoplaySpeed": 2900,
     prevArrow: false,
     nextArrow: false
-
   };
 
   nextSlide() {
@@ -29,7 +28,6 @@ export class CaroselloComponent {
     this.slickModal.slickPrev();
   }
   currentContainerBackground: string = 'defaultBackground'; // Bbackground predefinito
-
   
   public currentPerspItem: any;
   public canUpdatePersp = true;
@@ -37,15 +35,21 @@ export class CaroselloComponent {
   public currentBackgroundImage = 'none';
   public showOverlay = false;
 
-
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   slides = [
-    { img: "assets/cards_img/Article1.png", bgClass: 'bg1' },
-    { img: "assets/cards_img/Article2.png", bgClass: 'bg2' },
-    { img: "assets/cards_img/Article3.png", bgClass: 'bg3' },
+    { img: "assets/cards_img/t1.jpg", bgClass: 'bg1' },
+    { img: "assets/cards_img/t2.jpg", bgClass: 'bg2' },
+    { img: "assets/cards_img/t3.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t4.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t5.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t6.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t7.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t8.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t9.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t10.jpg", bgClass: 'bg3' },
+    { img: "assets/cards_img/t11.jpg", bgClass: 'bg3' },
   ];
-  
 
   public changeBackgroundForRow(event: MouseEvent, image: string, bgClass: string) {
     const backgroundContainer = this.el.nativeElement.querySelector('.background-container');

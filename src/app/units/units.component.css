@@ -30,7 +30,7 @@
 }
 
 .bots{
-    height: 420px;
+    height: 423px;
     background: linear-gradient(to right, rgb(229,95,58), rgb(105,33,18) 60%);
     margin-top: -112px;
     user-select: none;
@@ -108,7 +108,7 @@ h1{
 
     .container{
         z-index: -1;
-        padding: 50px 0px;
+        padding: 0px 0px;
     }
 
     .desc-wrap{
@@ -174,7 +174,7 @@ h1{
     .bots .imgsm {
         margin-left: 18px;
         object-position: left;
-        padding-top: 30px;
+        padding-top: 35px;
 
     }
     .units .imgsm{

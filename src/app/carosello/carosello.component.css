@@ -145,7 +145,7 @@ h4 {
         margin: 87px 0 130px 0; /* Margini ridotti */
         flex-direction: column;
         padding: 5px; /* Padding ridotto */
-
+        padding-bottom: 45px;
     }
 
     .card {
