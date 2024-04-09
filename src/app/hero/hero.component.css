@@ -3,7 +3,7 @@
     user-select: none;
     background-image: 
         linear-gradient(to bottom, transparent, rgb(17, 33, 48)),
-        url('../../assets/img/Header.png');
+        url('src\assets\Images\BG_Header.jpg');
     background-size: cover;
 }
 
